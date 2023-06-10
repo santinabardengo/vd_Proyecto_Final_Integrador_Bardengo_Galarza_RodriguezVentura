@@ -1,9 +1,76 @@
 
-div#chart, #chart2, #chart3 {
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700|Roboto:400,700&display=swap');
+
+
+div#chart{
     overflow-y: auto;
     max-width: 800px;
     margin: auto;
-}
-div#chart {
     width: 40%;
+}
+
+body {
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    margin-left: 10%;
+}
+
+h2 {
+    margin-left: 10%;
+}
+
+p {
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1%;
+    height: auto;
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 5%;
+}
+.logo img {
+    margin-left: 10%;
+    height: 30%;
+    width: 30%;
+    vertical-align: middle;
+}
+
+nav {
+    margin-left: auto; 
+    margin-right: 10%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 10px;
+
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+nav li:hover {
+    color: green; 
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 1%;
+    align-items: center; 
+}
+.logo_footer img{
+    height: 10%;
+    width: 10%;
+    margin-left: 5%
 }
