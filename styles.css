@@ -1,0 +1,9 @@
+
+div#chart, #chart2, #chart3 {
+    overflow-y: auto;
+    max-width: 800px;
+    margin: auto;
+}
+div#chart {
+    width: 40%;
+}
