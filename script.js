@@ -9,13 +9,13 @@ const locale = {
   let chart
   let dataFetched = []
   let cancion = {
-    minutos: 0,
-    nombre: 'Cancion',
+    mes: 1,
+    trackName: 'Cancion',
   }
   
   /* Selected elements */
-  let $sliderMinutos = d3.select('#msPlayed')
-  let $minutosP = d3.select('#value-minutos')
+  let $sliderMes = d3.select('#mes')
+  let $mesP = d3.select('#value-mes')
 //   let $sliderAltura = d3.select('#altura')
 //   let $alturaP = d3.select('#value-altura')
   
@@ -27,14 +27,14 @@ d3.json('StreamingHistory3.json').then(data => {
   
     var formatMonth = d3.timeFormat('%m');
     data.forEach(function(d) {
-      d.mes = formatMonth(d.endTime);
+    d.mes = parseInt(formatMonth(d.endTime));
     });
   
-   console.log(data)
+  
 
     dataFetched = data
-    $sliderMinutos.attr('value', cancion.minutos)
-    $minutosP.text(cancion.minutos)
+    $sliderMes.attr('value', cancion.mes)
+    $mesP.text(cancion.mes)
 
     createChart(dataFetched)
     registerListenerInput()
@@ -42,9 +42,9 @@ d3.json('StreamingHistory3.json').then(data => {
 
 
 function registerListenerInput() {
-    $sliderMinutos.on('input', event => {
-      cancion.minutos = event.target.value
-      $minutosP.text(event.target.value)
+    $sliderMes.on('input', event => {
+      cancion.mes = event.target.value
+      $mesP.text(event.target.value)
       createChart(dataFetched)
     })
 }
@@ -53,18 +53,24 @@ function createChart(data) {
     /* Agregamos al usuario */
     data = data.concat(cancion)
     // console.table(data)
-  
+    console.log(data)
     chart = Plot.plot({
-      grid: true,
       nice: true,
-  
       marks: [
         Plot.barY(data, Plot.groupX({y:"sum"},{
           x: "mes",
-          y: d => d.msPlayed/ 60000,
+          y: d => d.msPlayed/60000,
           strokeOpacity: 0.3,
           stroke: 'black',
+          fill: "gray"
         })),
+        Plot.dot(data, {
+            x: 'mes',
+            filter: d => d.trackName == 'Cancion',
+            y: d => d.msPlayed /60000,
+            fill: '#0060df',
+            r: 10,
+        }),
       ],
       x: {
         label: 'Mes',
