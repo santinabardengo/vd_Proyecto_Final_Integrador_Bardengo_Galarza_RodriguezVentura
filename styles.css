@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova:400,700|Roboto:400,700&display=swap');
 
-
 div#chart{
     overflow-y: auto;
     max-width: 800px;
@@ -12,13 +11,25 @@ div#chart{
 body {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
 }
+
+div#bajadaGeneral{
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    margin-left: 10%;
+
+}
+div#bajada1{
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    margin-left: 10%;
+}
 h1 {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
     margin-left: 10%;
+    color: black;
 }
 
 h2 {
     margin-left: 10%;
+    color: black;
 }
 
 p {
@@ -36,8 +47,8 @@ header {
 }
 .logo img {
     margin-left: 10%;
-    height: 30%;
-    width: 30%;
+    height: 35%;
+    width: 35%;
     vertical-align: middle;
 }
 
@@ -54,10 +65,10 @@ nav ul {
 
 nav li {
     margin-left: 10px;
-
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
+    font-size: large;
 }
 nav li:hover {
     color: green; 
@@ -68,9 +79,12 @@ footer {
     color: white;
     height: 1%;
     align-items: center; 
+    margin-top: 10%;
 }
 .logo_footer img{
     height: 10%;
     width: 10%;
     margin-left: 5%
 }
+
+
