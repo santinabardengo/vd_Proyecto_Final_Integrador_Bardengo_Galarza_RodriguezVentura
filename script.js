@@ -20,6 +20,8 @@ const locale = {
 //   let $alturaP = d3.select('#value-altura')
   
 d3.json('StreamingHistory3.json').then(data => {
+    dataFetched = data
+    
     var parseTime = d3.timeParse('%Y-%m-%d %H:%M');
     data.forEach(function(d) {
       d.endTime = parseTime(d.endTime);
@@ -30,9 +32,7 @@ d3.json('StreamingHistory3.json').then(data => {
     d.mes = parseInt(formatMonth(d.endTime));
     });
   
-  
-
-    dataFetched = data
+   
     $sliderMes.attr('value', cancion.mes)
     $mesP.text(cancion.mes)
 
@@ -52,7 +52,7 @@ function registerListenerInput() {
 function createChart(data) {
     /* Agregamos al usuario */
     data = data.concat(cancion)
-    // console.table(data)
+    //console.table(data)
     console.log(data)
     chart = Plot.plot({
       nice: true,
