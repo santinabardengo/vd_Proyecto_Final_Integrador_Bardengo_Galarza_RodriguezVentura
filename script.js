@@ -32,7 +32,7 @@ d3.json('StreamingHistory3.json').then(data => {
     d.mes = parseInt(formatMonth(d.endTime));
     });
   
-   
+  
     $sliderMes.attr('value', cancion.mes)
     $mesP.text(cancion.mes)
 
@@ -61,9 +61,9 @@ function createChart(data, selectedMes) {
         Plot.barY(data, Plot.groupX({y:"sum"},{
           x: "mes",
           y: d => d.msPlayed/60000,
-          strokeOpacity: 0.3,
+          strokeOpacity: 0.4,
           stroke: 'black',
-          fill: d => (d.mes == selectedMes) ? 'blue' : 'gray'
+          fill: d => (d.mes == selectedMes) ? 'green' : 'gray'
         })),
         // Plot.dot(data, {
         //     x: 'mes',
@@ -79,7 +79,7 @@ function createChart(data, selectedMes) {
       },
       y: {
         label: 'Minutos escuchados',
-        tickFormat: '.2f',
+        //tickFormat: '.2f',
       },
     })
   

@@ -3,9 +3,9 @@
 
 div#chart{
     overflow-y: auto;
-    max-width: 800px;
     margin: auto;
-    width: 40%;
+    width: 50%;
+    margin-left: 15%;
 }
 
 body {
@@ -14,22 +14,32 @@ body {
 
 div#bajadaGeneral{
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 10%;
+    margin-left: 15%;
 
 }
 div#bajada1{
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 h1 {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 10%;
+    margin-left: 15%;
     color: black;
+    font-weight: bolder;
 }
 
 h2 {
-    margin-left: 10%;
+    margin-left: 15%;
     color: black;
+    margin-top: 1%;
+}
+
+h3 {
+    margin-left: 15%;
+}
+
+div#slider {
+    margin-left: 15%;
 }
 
 p {
@@ -40,21 +50,21 @@ header {
     background-color: black;
     color: white;
     padding: 1%;
-    height: auto;
+    height: 20%;
     display: flex; 
     align-items: center; 
     margin-bottom: 5%;
 }
 .logo img {
-    margin-left: 10%;
-    height: 35%;
-    width: 35%;
+    margin-left: 15%;
+    height: 40%;
+    width: 40%;
     vertical-align: middle;
 }
 
 nav {
     margin-left: auto; 
-    margin-right: 10%;
+    margin-right: 15%;
 }
 nav ul {
     list-style-type: none;
@@ -78,8 +88,8 @@ footer {
     background-color: black;
     color: white;
     height: 1%;
-    align-items: center; 
     margin-top: 10%;
+    
 }
 .logo_footer img{
     height: 10%;
@@ -87,4 +97,17 @@ footer {
     margin-left: 5%
 }
 
+footer ul{
+    list-style-type: none;
+    color: #ffffff;
+}
 
+footer ul li{
+    display: inline-block;
+    margin-left: 4%;
+    
+}
+
+footer span{
+    margin-left: 5%;
+}
