@@ -36,22 +36,23 @@ d3.json('StreamingHistory3.json').then(data => {
     $sliderMes.attr('value', cancion.mes)
     $mesP.text(cancion.mes)
 
-    createChart(dataFetched)
+    createChart(dataFetched, cancion.mes)
     registerListenerInput()
   });
 
 
 function registerListenerInput() {
     $sliderMes.on('input', event => {
-      cancion.mes = event.target.value
-      $mesP.text(event.target.value)
-      createChart(dataFetched)
-    })
+    let selectedMes = event.target.value;
+    cancion.mes = selectedMes;
+    $mesP.text(selectedMes);
+    createChart(dataFetched, selectedMes);
+  });
 }
 
-function createChart(data) {
-    /* Agregamos al usuario */
-    data = data.concat(cancion)
+function createChart(data, selectedMes) {
+    /* Agregamos la cancion */
+    //data = data.concat(cancion)
     //console.table(data)
     console.log(data)
     chart = Plot.plot({
@@ -62,23 +63,23 @@ function createChart(data) {
           y: d => d.msPlayed/60000,
           strokeOpacity: 0.3,
           stroke: 'black',
-          fill: "gray"
+          fill: d => (d.mes == selectedMes) ? 'blue' : 'gray'
         })),
-        Plot.dot(data, {
-            x: 'mes',
-            filter: d => d.trackName == 'Cancion',
-            y: d => d.msPlayed /60000,
-            fill: '#0060df',
-            r: 10,
-        }),
+        // Plot.dot(data, {
+        //     x: 'mes',
+        //     filter: d => d.trackName == 'Cancion',
+        //     y: d => d.msPlayed /60000,
+        //     fill: '#0060df',
+        //     r: 10,
+        // }),
       ],
       x: {
         label: 'Mes',
-        // ticks: 5,
+        //ticks: 6,
       },
       y: {
         label: 'Minutos escuchados',
-        //tickFormat: '.2f',
+        tickFormat: '.2f',
       },
     })
   
