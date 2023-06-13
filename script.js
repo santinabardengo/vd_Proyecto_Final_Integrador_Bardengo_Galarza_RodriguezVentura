@@ -72,6 +72,7 @@ function createChart(data, selectedMes) {
         //     fill: '#0060df',
         //     r: 10,
         // }),
+        
       ],
       x: {
         label: 'Mes',
@@ -88,5 +89,55 @@ function createChart(data, selectedMes) {
   
     /* Crea el chart nuevo */
     d3.select('#chart').append(() => chart)
-  }
+}
   
+
+function findMostListenedSongPerMonth(data) {
+  // Creamos un objeto para almacenar la suma de los milisegundos escuchados por canción en cada mes
+  let totalListenedTime = {};
+
+  // Recorremos los datos y sumamos los milisegundos escuchados por canción en cada mes
+  data.forEach(datum => {
+    const month = datum.endTime.slice(0, 7);
+    const currentTotalTime = totalListenedTime[month] || {};
+
+    // Si la canción no está en el objeto totalListenedTime, la agregamos con su tiempo de reproducción
+    if (!currentTotalTime[datum.trackName]) {
+      currentTotalTime[datum.trackName] = datum.msPlayed/60000;
+    } else {
+      // Si la canción ya está en el objeto totalListenedTime, sumamos los milisegundos escuchados
+      currentTotalTime[datum.trackName] += datum.msPlayed/60000;
+    }
+
+    totalListenedTime[month] = currentTotalTime;
+  });
+
+  // Recorremos el objeto totalListenedTime para encontrar la canción más escuchada de cada mes
+  let mostListenedSongs = {};
+  for (let month in totalListenedTime) {
+    let maxTime = 0;
+    let mostListenedSong = '';
+
+    for (let song in totalListenedTime[month]) {
+      const time = totalListenedTime[month][song];
+      if (time > maxTime) {
+        maxTime = time;
+        mostListenedSong = song;
+      }
+    }
+
+    mostListenedSongs[month] = {
+      song: mostListenedSong,
+      plays: maxTime
+    };
+  }
+
+  return mostListenedSongs;
+}
+
+// Cargar los datos desde un archivo JSON
+d3.json('StreamingHistory3.json').then(data => {
+  // Llamar a la función findMostListenedSongPerMonth con los datos cargados
+  const mostListenedSongsPerMonth = findMostListenedSongPerMonth(data);
+  console.log("Canciones mas escuchadas:", mostListenedSongsPerMonth);
+});

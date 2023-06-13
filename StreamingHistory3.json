@@ -79638,12 +79638,6 @@
       "msPlayed" : 5479
     },
     {
-      "endTime" : "2023-05-03 16:16",
-      "artistName" : "Historias de nuestra historia",
-      "trackName" : "\"Los secretos de la ESMA\", por Marina Franco y Claudia Feld",
-      "msPlayed" : 3397540
-    },
-    {
       "endTime" : "2023-05-03 16:17",
       "artistName" : "Al Green",
       "trackName" : "People Get Ready",
@@ -84617,18 +84611,7 @@
       "trackName" : "Tango Canción",
       "msPlayed" : 104210
     },
-    {
-      "endTime" : "2023-05-10 15:12",
-      "artistName" : "Historias de nuestra historia",
-      "trackName" : "Federico Peralta Ramos, personaje central de la bohemia porteña",
-      "msPlayed" : 311170
-    },
-    {
-      "endTime" : "2023-05-10 16:05",
-      "artistName" : "Historias de nuestra historia",
-      "trackName" : "Federico Peralta Ramos, personaje central de la bohemia porteña",
-      "msPlayed" : 3075430
-    },
+   
     {
       "endTime" : "2023-05-10 16:06",
       "artistName" : "Gotan Project",
@@ -103925,48 +103908,7 @@
       "trackName" : "Cello Sonata No. 1 in E Minor, Op. 38 No. 1 (Arr. for 2 Cellos): III. Rondo. Allegretto",
       "msPlayed" : 217109
     },
-    {
-      "endTime" : "2023-06-01 16:39",
-      "artistName" : "Historias Innecesarias",
-      "trackName" : "Teorias Conspirativas: Alunizaje y terraplanistas",
-      "msPlayed" : 1409231
-    },
-    {
-      "endTime" : "2023-06-01 16:45",
-      "artistName" : "Historias Innecesarias",
-      "trackName" : "Historias reales detrás de las princesas de Disney",
-      "msPlayed" : 380400
-    },
-    {
-      "endTime" : "2023-06-01 16:48",
-      "artistName" : "Historias Innecesarias",
-      "trackName" : "El bidet",
-      "msPlayed" : 200826
-    },
-    {
-      "endTime" : "2023-06-01 16:51",
-      "artistName" : "Historias Innecesarias",
-      "trackName" : "Tita y Rhodesia",
-      "msPlayed" : 171401
-    },
-    {
-      "endTime" : "2023-06-01 16:58",
-      "artistName" : "Historias Innecesarias",
-      "trackName" : "El Gusano Menocchio",
-      "msPlayed" : 373519
-    },
-    {
-      "endTime" : "2023-06-02 15:02",
-      "artistName" : "Wings",
-      "trackName" : "Let 'Em In - 2014 Remaster",
-      "msPlayed" : 311880
-    },
-    {
-      "endTime" : "2023-06-02 15:07",
-      "artistName" : "KC & The Sunshine Band",
-      "trackName" : "Give It Up",
-      "msPlayed" : 245800
-    },
+  
     {
       "endTime" : "2023-06-02 15:09",
       "artistName" : "Virus",
