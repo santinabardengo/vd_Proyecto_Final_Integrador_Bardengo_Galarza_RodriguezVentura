@@ -68,11 +68,12 @@ function createChart(data, selectedMes) {
           stroke: 'black',
           fill: d => (d.mes == selectedMes) ? '#1DB954' : '#B3B3B3'
         })),
-
+        
         Plot.text(data, Plot.groupY({x: 'sum'}, {
           y: 'mes',
+          text: 'sum',
           text: d => d.x,
-          textAnchor: 'start',
+          textAnchor: 'top',
           dx: 5,
           fill: 'black'
         })),
