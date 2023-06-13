@@ -6,7 +6,12 @@ div#chart{
     width: 50%;
     margin-left: 15%;
 }
-
+div#chart2{
+    overflow-y: auto;
+    margin: auto;
+    width: 50%;
+    margin-left: 15%;
+}
 body {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
 }
