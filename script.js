@@ -12,6 +12,9 @@ const locale = {
     mes: 1,
     trackName: 'Cancion',
   }
+  const monthNames = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"
+  ];
   
   /* Selected elements */
   let $sliderMes = d3.select('#mes')
@@ -58,30 +61,46 @@ function createChart(data, selectedMes) {
     chart = Plot.plot({
       nice: true,
       marks: [
-        Plot.barY(data, Plot.groupX({y:"sum"},{
-          x: "mes",
-          y: d => d.msPlayed/60000,
+        Plot.barX(data, Plot.groupY({x:"sum"},{
+          x: d => d.msPlayed/60000,
+          y: 'mes',
           strokeOpacity: 0.4,
           stroke: 'black',
-          fill: d => (d.mes == selectedMes) ? 'green' : 'gray'
+          fill: d => (d.mes == selectedMes) ? '#1DB954' : '#B3B3B3'
         })),
-        // Plot.dot(data, {
-        //     x: 'mes',
-        //     filter: d => d.trackName == 'Cancion',
-        //     y: d => d.msPlayed /60000,
-        //     fill: '#0060df',
-        //     r: 10,
-        // }),
-        
+
+        Plot.text(data, Plot.groupY({x: 'sum'}, {
+          y: 'mes',
+          text: d => d.x,
+          textAnchor: 'start',
+          dx: 5,
+          fill: 'black'
+        })),
+
+        Plot.axisX({
+          label:null,
+          tickSize: 0,
+          color: 'white',
+          fontWeight: 'bold'
+        }),
+
+        Plot.axisY({
+          label: null,
+          tickFormat: d => monthNames[d - 1],
+          tickLength: 50,  
+          tickSize: 0,
+          padding: 50,       
+          fontWeight: 'bold',
+       
+        }),
       ],
-      x: {
-        label: 'Mes',
-        //ticks: 6,
-      },
-      y: {
-        label: 'Minutos escuchados',
-        //tickFormat: '.2f',
-      },
+      
+      width: 800,
+      height: 300,
+      marginLeft: 50,
+      marginRight: 100,
+      marginBottom: 50,
+      
     })
   
     /* Remueve el chart viejo */
