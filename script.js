@@ -75,6 +75,7 @@ function createChart(data, selectedMes) {
           textAnchor: 'start',
           dx: 5,
           fill: 'black'
+          //plot.text no anda
         })),
 
         Plot.axisX({
