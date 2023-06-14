@@ -184,8 +184,8 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
       y: 'energy'})
       
     ],
-    width: 1100,
-      height: 700,
+    width: 2200,
+      height: 900,
       insetLeft: 40,
       insetRight: 40,
       marginBottom: 50,
@@ -208,7 +208,7 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
       },
       style: {
         fontFamily: 'sans-serif',
-        fontSize: 20,
+        fontSize: 42,
         background: 'white',
         
     
