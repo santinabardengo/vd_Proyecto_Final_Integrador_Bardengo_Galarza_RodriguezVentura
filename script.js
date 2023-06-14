@@ -113,6 +113,8 @@ function createChart(data, selectedMes) {
 }
   
 
+
+
 function findMostListenedSongPerMonth(data) {
   // Creamos un objeto para almacenar la suma de los milisegundos escuchados por canción en cada mes
   let totalListenedTime = {};
@@ -162,52 +164,3 @@ d3.json('StreamingHistory3.json').then(data => {
   const mostListenedSongsPerMonth = findMostListenedSongPerMonth(data);
   console.log("Canciones mas escuchadas:", mostListenedSongsPerMonth);
 });
-
-d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
-  console.log(data)
-  const canciones = data.map(d => d.cancion);
-  
-  let chart2 = Plot.plot({
-    marks: [
-      Plot.text(data, {x: 'cancion', y: 'energy', text: d => d.cancion}),
-      Plot.line(data, {x: 'cancion',
-      strokeWidth: 2.5,
-      strokeOpacity: 0.3,
-      marker: "circle",
-      r: 3,
-      y: 'energy'})
-      
-    ],
-    width: 2200,
-      height: 900,
-      insetLeft: 40,
-      insetRight: 40,
-      marginBottom: 50,
-      marginTop: 30,
-    
-      y: {
-        grid: true,
-        label: '',
-        labelOffset: 75,
-        domain: [0, 1],
-        ticks: 5,
-      },
-
-    x: { 
-      type: 'band', 
-      domain: canciones,
-      label: '',
-      tickFormat: () => '',
-      
-      },
-      style: {
-        fontFamily: 'sans-serif',
-        fontSize: 42,
-        background: 'white',
-        
-    
-      },
-
-  })
-  d3.select('#chart2').append(() => chart2)
-})
