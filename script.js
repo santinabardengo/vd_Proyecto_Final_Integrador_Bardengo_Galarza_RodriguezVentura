@@ -8,19 +8,10 @@ const locale = {
   /* Var. globales */
   let chart
   let dataFetched = []
-  let cancion = {
-    mes: 1,
-    trackName: 'Cancion',
-  }
   const monthNames = [
     "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"
   ];
   
-  /* Selected elements */
-  let $sliderMes = d3.select('#mes')
-  let $mesP = d3.select('#value-mes')
-//   let $sliderAltura = d3.select('#altura')
-//   let $alturaP = d3.select('#value-altura')
   
 d3.json('StreamingHistory3.json').then(data => {
     
@@ -36,25 +27,12 @@ d3.json('StreamingHistory3.json').then(data => {
 
     let filteredData = data.filter(d => d.mes !== 6)
     dataFetched = filteredData
-  
-    $sliderMes.attr('value', cancion.mes)
-    $mesP.text(cancion.mes)
 
-    createChart(dataFetched, cancion.mes)
-    registerListenerInput()
+    createChart(dataFetched)
   });
 
 
-function registerListenerInput() {
-    $sliderMes.on('input', event => {
-    let selectedMes = event.target.value;
-    cancion.mes = selectedMes;
-    $mesP.text(selectedMes);
-    createChart(dataFetched, selectedMes);
-  });
-}
-
-function createChart(data, selectedMes) {
+function createChart(data) {
     console.log(data)
     chart = Plot.plot({
       nice: true,
@@ -64,7 +42,8 @@ function createChart(data, selectedMes) {
           y: 'mes',
           strokeOpacity: 0.4,
           stroke: 'black',
-          fill: d => (d.mes == selectedMes) ? '#1DB954' : '#B3B3B3'
+          fill: '#B3B3B3',
+          //tip: true,
         })),
         
         Plot.text(data, Plot.groupY({x: 'sum'}, {
@@ -83,7 +62,6 @@ function createChart(data, selectedMes) {
           fontWeight: 'bold'
     
         })),
-
         Plot.axisX({
           label:null,
           tickSize: 0,
@@ -91,6 +69,12 @@ function createChart(data, selectedMes) {
           fontWeight: 'bold',
           fontSize: 15
         }),
+        Plot.tip(data, Plot.groupY({
+          x: d => d.msPlayed / 60000,
+          y: "mes",
+          //filter: (d) => d.info,
+          title: (d) => [d.mes].join("\n\n")
+        })),
 
         Plot.axisY({
           label: null,
