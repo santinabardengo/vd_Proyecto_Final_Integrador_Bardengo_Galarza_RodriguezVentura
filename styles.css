@@ -5,12 +5,14 @@ div#chart{
     margin: auto;
     width: 50%;
     margin-left: 15%;
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
 }
 div#chart2{
     overflow-y: auto;
     margin: auto;
     width: 40%;
     margin-left: 15%;
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
 }
 body {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;

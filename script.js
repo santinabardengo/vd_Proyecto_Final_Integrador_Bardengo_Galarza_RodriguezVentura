@@ -23,7 +23,6 @@ const locale = {
 //   let $alturaP = d3.select('#value-altura')
   
 d3.json('StreamingHistory3.json').then(data => {
-    dataFetched = data
     
     var parseTime = d3.timeParse('%Y-%m-%d %H:%M');
     data.forEach(function(d) {
@@ -34,7 +33,9 @@ d3.json('StreamingHistory3.json').then(data => {
     data.forEach(function(d) {
     d.mes = parseInt(formatMonth(d.endTime));
     });
-  
+
+    let filteredData = data.filter(d => d.mes !== 6)
+    dataFetched = filteredData
   
     $sliderMes.attr('value', cancion.mes)
     $mesP.text(cancion.mes)
@@ -54,9 +55,6 @@ function registerListenerInput() {
 }
 
 function createChart(data, selectedMes) {
-    /* Agregamos la cancion */
-    //data = data.concat(cancion)
-    //console.table(data)
     console.log(data)
     chart = Plot.plot({
       nice: true,
@@ -71,19 +69,27 @@ function createChart(data, selectedMes) {
         
         Plot.text(data, Plot.groupY({x: 'sum'}, {
           y: 'mes',
-          text: 'sum',
-          text: d => d.x,
+          x: d => d.msPlayed / 60000,
+          text: d => {
+            let suma_ms = d3.sum(d, d2 => d2.msPlayed / (60000*60));
+            let formattedValue = d3.format('d')(suma_ms);
+            return formattedValue + ' hs';
+          },
           textAnchor: 'top',
-          dx: 5,
-          fill: 'black'
-          //plot.text no anda
+          dx: 25,
+          dy: -2,
+          fill: 'black',
+          fontSize: 12,
+          fontWeight: 'bold'
+    
         })),
 
         Plot.axisX({
           label:null,
           tickSize: 0,
           color: 'white',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontSize: 15
         }),
 
         Plot.axisY({
