@@ -2,42 +2,19 @@ const locale = {
   decimal: ',',
   thousands: '.',
   grouping: [3],
-<<<<<<< HEAD
-};
-d3.formatDefaultLocale(locale);
-
-/* Variables globales */
-let chart;
-let dataFetched = [];
-let cancion = {
-  mes: 1,
-  trackName: 'Cancion',
-};
-=======
 }
 d3.formatDefaultLocale(locale)
 
 /* Var. globales */
 let chart
 let dataFetched = []
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
 const monthNames = [
   "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"
 ];
 
-<<<<<<< HEAD
-/* Elementos seleccionados */
-let $sliderMes = d3.select('#mes');
-let $mesP = d3.select('#value-mes');
-// let $sliderAltura = d3.select('#altura');
-// let $alturaP = d3.select('#value-altura');
-
-d3.json('StreamingHistory3.json').then(data => {
-=======
 
 d3.json('StreamingHistory3.json').then(data => {
   
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
   var parseTime = d3.timeParse('%Y-%m-%d %H:%M');
   data.forEach(function(d) {
     d.endTime = parseTime(d.endTime);
@@ -45,66 +22,9 @@ d3.json('StreamingHistory3.json').then(data => {
 
   var formatMonth = d3.timeFormat('%m');
   data.forEach(function(d) {
-<<<<<<< HEAD
-    d.mes = parseInt(formatMonth(d.endTime));
-  });
-
-  let filteredData = data.filter(d => d.mes !== 6);
-  dataFetched = filteredData;
-
-  $sliderMes.attr('value', cancion.mes);
-  $mesP.text(cancion.mes);
-
-  createChart(dataFetched, cancion.mes);
-  registerListenerInput();
-});
-
-
-function registerListenerInput() {
-  $sliderMes.on('input', event => {
-    let selectedMes = event.target.value;
-    cancion.mes = selectedMes;
-    $mesP.text(selectedMes);
-    createChart(dataFetched, selectedMes);
-=======
   d.mes = parseInt(formatMonth(d.endTime));
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
   });
 
-<<<<<<< HEAD
-function createChart(data, selectedMes) {
-  console.log(data);
-  chart = Plot.plot({
-    nice: true,
-    marks: [
-      Plot.barX(data, Plot.groupY({ x: "sum" }, {
-        x: d => d.msPlayed / 60000,
-        y: 'mes',
-        strokeOpacity: 0.4,
-        stroke: 'black',
-        fill: d => (d.mes == selectedMes) ? '#1DB954' : '#B3B3B3'
-      })),
-
-      Plot.text(data, Plot.groupY({ x: 'sum' }, {
-        y: 'mes',
-        x: d => d.msPlayed / 60000,
-        text: d => {
-          let suma_ms = d3.sum(d, d2 => d2.msPlayed / (60000 * 60));
-          let formattedValue = d3.format('d')(suma_ms);
-          return formattedValue + ' hs';
-        },
-        textAnchor: 'top',
-        dx: 25,
-        dy: -2,
-        fill: 'black',
-        fontSize: 12,
-        fontWeight: 'bold'
-
-      })),
-
-      Plot.axisX({
-        label: null,
-=======
   let filteredData = data.filter(d => d.mes !== 6)
   dataFetched = filteredData
 
@@ -144,26 +64,21 @@ function createChart(data) {
       })),
       Plot.axisX({
         label:null,
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
         tickSize: 0,
         color: 'white',
         fontWeight: 'bold',
         fontSize: 15
       }),
-<<<<<<< HEAD
-=======
       Plot.tip(data, Plot.groupY({
         x: d => d.msPlayed / 60000,
         y: "mes",
         //filter: (d) => d.info,
         title: (d) => [d.mes].join("\n\n")
       })),
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
 
       Plot.axisY({
         label: null,
         tickFormat: d => monthNames[d - 1],
-<<<<<<< HEAD
         tickLength: 50,
         tickSize: 0,
         padding: 50,
@@ -172,22 +87,11 @@ function createChart(data) {
       }),
     ],
 
-=======
-        tickLength: 50,  
-        tickSize: 0,
-        padding: 50,       
-        fontWeight: 'bold',
-     
-      }),
-    ],
-    
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a
     width: 800,
     height: 300,
     marginLeft: 50,
     marginRight: 100,
     marginBottom: 50,
-<<<<<<< HEAD
 
   });
 
@@ -311,14 +215,3 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
   d3.select('#chart2').append(() => chart2);
 });
 
-=======
-    
-  })
-
-  /* Remueve el chart viejo */
-  d3.select('#chart svg').remove()
-
-  /* Crea el chart nuevo */
-  d3.select('#chart').append(() => chart)
-}
->>>>>>> 820a7e50646e66bee904c84c09447a3fa0a1304a

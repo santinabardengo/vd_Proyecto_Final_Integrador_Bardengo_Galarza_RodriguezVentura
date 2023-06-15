@@ -34,6 +34,71 @@ body {
             width: 80%;
 }
 
+
+#scrolly {
+    position: relative;
+    /* background-color: #f3f3f3; */
+    padding: 1rem;
+    display: flex
+  }
+
+#scrolly svg  {
+    display: block;
+    margin: auto;
+}
+
+.step {
+    margin: 0 auto 2rem auto;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 100vh;
+}
+  
+.step:last-child {
+    margin-bottom: 0;
+}
+  
+.step.is-active p {
+    background-color: rgb(250, 250, 250);
+    color: #3b3b3b;
+}
+  
+.step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #3b3b3b;
+}
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* background-color: #8a8a8a; */
+    z-index: 0;
+    height: 100vh;
+    top: 0;
+  }
+  
+figure p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+  }
+
 #tituloG1 {
     display: none;
     position: fixed;
@@ -42,21 +107,6 @@ body {
     transform: translate(-50%, -50%);
     font-size: 36px;
     
-}
-
-#chartContainer {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-}
-
-#bajada1 {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
 }
 
 #chart2 {
@@ -101,3 +151,9 @@ footer ul li {
 footer span {
     margin-left: 5%;
 }
+
+g[aria-label="text"] text {
+    font-weight: bold;
+    font-size: 9px;
+    text-shadow: -2px -2px 0px whitesmoke, -2px -1px 0px whitesmoke, -2px 0px 0px whitesmoke, -2px 1px 0px whitesmoke, -2px 2px 0px whitesmoke, -1px -2px 0px whitesmoke, -1px -1px 0px whitesmoke, -1px 0px 0px whitesmoke, -1px 1px 0px whitesmoke, -1px 2px 0px whitesmoke, 0px -2px 0px whitesmoke, 0px -1px 0px whitesmoke, 0px 1px 0px whitesmoke, 0px 2px 0px whitesmoke, 1px -2px 0px whitesmoke, 1px -1px 0px whitesmoke, 1px 0px 0px whitesmoke, 1px 1px 0px whitesmoke, 1px 2px 0px whitesmoke, 2px -2px 0px whitesmoke, 2px -1px 0px whitesmoke, 2px 0px 0px whitesmoke, 2px 1px 0px whitesmoke, 2px 2px 0px whitesmoke;
+  }
