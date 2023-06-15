@@ -117,21 +117,3 @@ footer ul li{
 footer span{
     margin-left: 5%;
 }
-<<<<<<< HEAD
-=======
-
-.d3-tip {
-    position: absolute;
-    padding: 6px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    color: #333;
-    pointer-events: none;
-  }
-  
-  .d3-tip span {
-    font-weight: bold;
-  }
-  
->>>>>>> 1db545a6c930d5536608221ec3cacbb1c620eaf7
