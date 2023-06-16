@@ -17,61 +17,24 @@
 </head>
 <body>
     <main>
-        <!-- <div id = "title">
+        <div id = "title">
         <h1 >Mitad de año con Spotify</h1>
-        </div> -->
+        </div> 
             <!-- <img src="icono.png" alt="Icono"> -->
             <!-- <p>
                 <div id = "bajadaGeneral" >
                     <p>lorem ipsum explicacion</p>
                 </div>
             </p> -->
-        
-        <section id="scrolly">
-           
-            
-            <article>
-                <div class="step" data-step=1>
-                    <p>Altura (STEP 1)</p>
-                    <p class="progress">0.0%</p>
-                </div>
-                <div class="step" data-step=2>
-                    <p>Edad (STEP 2)</p>
-                    <p class="progress">0.0%</p>
-                </div>
-                <div class="step" data-step=3>
-                    <p>Goles (STEP 3)</p>
-                    <p class="progress">0.0%</p>
-                </div>
-                <div class="step" data-step=4>
-                    <p>Ligas (STEP 4)</p>
-                    <p class="progress">0.0%</p>
-                </div>
-                <div class="step" data-step=5>
-                    <p>Ligas (STEP 4)</p>
-                    <p class="progress">0.0%</p>
-                </div>
-            </article>
-            <figure></figure>
-        </section>
-
-            <!-- <div id="chartContainer">
-                <div id="tituloG1">
+        <div id="tituloG1">
                 <h2>Grafico 1</h2>
-                </div>
-                <div id="chart"></div>
-            </div> -->
-    
-
-        <!-- <script>
+        </div>
+                
+        <script>
         function toggleContent() {
             var title = document.getElementById("title");
             var bajadaGeneral = document.getElementById("bajadaGeneral");
             var tituloG1 = document.getElementById("tituloG1");
-            var chartContainer = document.getElementById("chartContainer");
-            var chart = document.getElementById("chart")
-
-
             // Verificar la posición del scroll
             if (window.scrollY > 0) {
                 title.style.display = "none";
@@ -82,12 +45,9 @@
             }
 
             if (window.scrollY > bajadaGeneral.offsetHeight) {
-                chartContainer.style.display = "block";
                 tituloG1.style.display = "block";
-                chart.style.display = "block"
                 bajadaGeneral.style.display = "none";
             } else {
-                chartContainer.style.display = "none";
                 tituloG1.style.display = "none";
             }
         }
@@ -95,12 +55,36 @@
         window.addEventListener("scroll", toggleContent);
 
         </script> 
-                     -->
-    </main>
         
+    <section id="scrolly">
 
-    
-<!-- 
+        <article>
+            <div class="step" data-step=1>
+                <p>Enero</p>
+                <p class="progress">0.0%</p>
+            </div>
+            <div class="step" data-step=2>
+                <p>Febrero</p>
+                <p class="progress">0.0%</p>
+            </div>
+            <div class="step" data-step=3>
+                <p>Marzo</p>
+                <p class="progress">0.0%</p>
+            </div>
+            <div class="step" data-step=4>
+                <p>Abril</p>
+                <p class="progress">0.0%</p>
+            </div>
+            <div class="step" data-step=5>
+                <p>Mayo</p>
+                <p class="progress">0.0%</p>
+            </div>
+        </article>
+        <figure></figure>
+    </section>
+
+    </main> 
+    <!--
     <footer>
         <div class="logo_footer">
             <img src="icono.png" alt="Icono">
@@ -115,7 +99,8 @@
         </ul>
         </div>
 
-    </footer> -->
+    </footer> 
+-->
     <script type="module" src="script1_scrolly.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>

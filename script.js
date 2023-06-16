@@ -192,7 +192,7 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
     marginBottom: 50,
     marginTop: 30,
     y: {
-      grid: true,
+      grid: false,
       label: '',
       labelOffset: 990,
       domain: [0, 1],
@@ -203,6 +203,7 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
       domain: canciones,
       label: '',
       tickFormat: () => '',
+      grid: false,
     },
     style: {
       fontFamily: 'sans-serif',
