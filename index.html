@@ -17,98 +17,95 @@
 </head>
 <body>
     <main>
-        <div id = "title">
-        <h1 >Mitad de año con Spotify</h1>
+        <div id="title">
+            <h1>Mitad de año con Spotify</h1>
         </div> 
-            <!-- <img src="icono.png" alt="Icono"> -->
-            <!-- <p>
-                <div id = "bajadaGeneral" >
-                    <p>lorem ipsum explicacion</p>
-                </div>
-            </p> -->
-        <div id="tituloG1">
-                <h2>Grafico 1</h2>
+
+        <div id="bajadaGeneral">
+            <p>lorem ipsum explicacion</p>
         </div>
-                
-        <script>
-        function toggleContent() {
-            var title = document.getElementById("title");
-            var bajadaGeneral = document.getElementById("bajadaGeneral");
-            var tituloG1 = document.getElementById("tituloG1");
-            // Verificar la posición del scroll
-            if (window.scrollY > 0) {
-                title.style.display = "none";
-                bajadaGeneral.style.display = "block";
-            } else {
-                title.style.display = "block";
-                bajadaGeneral.style.display = "none";
-            }
-
-            if (window.scrollY > bajadaGeneral.offsetHeight) {
-                tituloG1.style.display = "block";
-                bajadaGeneral.style.display = "none";
-            } else {
-                tituloG1.style.display = "none";
-            }
-        }
-
-        window.addEventListener("scroll", toggleContent);
-
-        </script> 
         
-    <section id="scrolly">
+        <div id="tituloG1">
+            <h2>Grafico 1</h2>
+        </div>
+        
+        <div id="scroll_g1">  
+            <section id="scrolly">
+        
+                <article>
+                    <div class="step" data-step=1>
+                        <p>Enero</p>
+                        <p class="progress">0.0%</p>
+                    </div>
+                    <div class="step" data-step=2>
+                        <p>Febrero</p>
+                        <p class="progress">0.0%</p>
+                    </div>
+                    <div class="step" data-step=3>
+                        <p>Marzo</p>
+                        <p class="progress">0.0%</p>
+                    </div>
+                    <div class="step" data-step=4>
+                        <p>Abril</p>
+                        <p class="progress">0.0%</p>
+                    </div>
+                    <div class="step" data-step=5>
+                        <p>Mayo</p>
+                        <p class="progress">0.0%</p>
+                    </div>
+                </article>
+                <figure></figure>
+            </section>
+        </div>        
 
-        <article>
-            <div class="step" data-step=1>
-                <p>Enero</p>
-                <p class="progress">0.0%</p>
-            </div>
-            <div class="step" data-step=2>
-                <p>Febrero</p>
-                <p class="progress">0.0%</p>
-            </div>
-            <div class="step" data-step=3>
-                <p>Marzo</p>
-                <p class="progress">0.0%</p>
-            </div>
-            <div class="step" data-step=4>
-                <p>Abril</p>
-                <p class="progress">0.0%</p>
-            </div>
-            <div class="step" data-step=5>
-                <p>Mayo</p>
-                <p class="progress">0.0%</p>
-            </div>
-        </article>
-        <figure></figure>
-    </section>
+        <script>
+            function toggleContent() {
+                var title = document.getElementById("title");
+                var bajadaGeneral = document.getElementById("bajadaGeneral");
+                var tituloG1 = document.getElementById("tituloG1");
+                var G1 = document.getElementById("scroll_g1")
+
+                // Verificar la posición del scroll
+                if (window.scrollY > 0) {
+                    title.style.display = "none";
+                    bajadaGeneral.style.display = "none";
+                    tituloG1.style.display = "none";
+                    G1.style.display = "none";
+                } else {
+                    title.style.display = "block";
+                    bajadaGeneral.style.display = "none";
+                    tituloG1.style.display = "none";
+                    G1.style.display = "none";
+                }
+                if (window.scrollY > title.offsetHeight) {
+                    title.style.display = "none";
+                    bajadaGeneral.style.display = "block";
+                    tituloG1.style.display = "none";
+                    G1.style.display = "none";
+                }
+                if (window.scrollY > bajadaGeneral.offsetTop + bajadaGeneral.offsetHeight) {
+                    title.style.display = "none";
+                    bajadaGeneral.style.display = "none";
+                    tituloG1.style.display = "block";
+                    G1.style.display = "none";
+                }
+                
+                if (window.scrollY > tituloG1.offsetTop + tituloG1.offsetHeight) {
+                    title.style.display = "none";
+                    bajadaGeneral.style.display = "none";
+                    tituloG1.style.display = "block";
+                    G1.style.display = "block";
+                }
+            }
+
+            window.addEventListener("scroll", toggleContent);
+        </script> 
 
     </main> 
-    <!--
-    <footer>
-        <div class="logo_footer">
-            <img src="icono.png" alt="Icono">
-        </div>
-        <span class="sp">© 2023 Spotify AB</span></div> 
 
-        <div id = "pie">
-        <ul>
-            <li>Acerca de</li>
-            <li>Ayuda</li>
-            <li>Reproductor web</li>
-        </ul>
-        </div>
-
-    </footer> 
--->
     <script type="module" src="script1_scrolly.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
-
-
 </body>
 </html>
-
-
-

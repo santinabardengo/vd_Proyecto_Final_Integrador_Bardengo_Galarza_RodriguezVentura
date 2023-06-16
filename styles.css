@@ -24,15 +24,16 @@ body {
 }
 
 #bajadaGeneral {
-    display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            text-align: center;
-            width: 80%;
+    display:none;
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        text-align: center;
+        width: 80%;
 }
+
 
 
 #scrolly {
@@ -40,7 +41,7 @@ body {
     /* background-color: #f3f3f3; */
     padding: 1rem;
     display: flex
-  }
+}
 
 #scrolly svg  {
     display: block;
@@ -101,11 +102,11 @@ figure p {
 
 #tituloG1 {
     display: none;
-    position: fixed;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
+        position:fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 36px;
     
 }
 
@@ -152,8 +153,8 @@ footer span {
     margin-left: 5%;
 }
 
-g[aria-label="text"] text {
+/* g[aria-label="text"] text {
     font-weight: bold;
     font-size: 9px;
     text-shadow: -2px -2px 0px whitesmoke, -2px -1px 0px whitesmoke, -2px 0px 0px whitesmoke, -2px 1px 0px whitesmoke, -2px 2px 0px whitesmoke, -1px -2px 0px whitesmoke, -1px -1px 0px whitesmoke, -1px 0px 0px whitesmoke, -1px 1px 0px whitesmoke, -1px 2px 0px whitesmoke, 0px -2px 0px whitesmoke, 0px -1px 0px whitesmoke, 0px 1px 0px whitesmoke, 0px 2px 0px whitesmoke, 1px -2px 0px whitesmoke, 1px -1px 0px whitesmoke, 1px 0px 0px whitesmoke, 1px 1px 0px whitesmoke, 1px 2px 0px whitesmoke, 2px -2px 0px whitesmoke, 2px -1px 0px whitesmoke, 2px 0px 0px whitesmoke, 2px 1px 0px whitesmoke, 2px 2px 0px whitesmoke;
-  }
+  } */
