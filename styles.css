@@ -15,60 +15,121 @@ body {
     font-size: 24px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1px;
+}
+
 #title {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#title h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 200vh;
 }
 
 #bajadaGeneral {
-    display:none;
-        position:fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-        text-align: center;
-        width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#bajadaGeneral p {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#tituloG1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#tituloG1 h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
 }
 
 
+
+/* esto no se toca eh */
 
 #scrolly {
     position: relative;
     /* background-color: #f3f3f3; */
     padding: 1rem;
-    display: flex
+    display: flex;
+    background-color: white;
+    overflow: hidden,
 }
 
 #scrolly svg  {
     display: block;
     margin: auto;
+    background-color: #fff;
 }
+
 
 .step {
     margin: 0 auto 2rem auto;
-    color: #fff;
+    color: #0f0e0e;
     background-color: rgba(255, 255, 255, 0.1);
     height: 100vh;
+    overflow: hidden; /* Agrega esta línea */
+    box-sizing: border-box; /* Agrega esta línea */
+    background-color: transparent !important;
 }
-  
+
 .step:last-child {
     margin-bottom: 0;
 }
-  
-.step.is-active p {
-    background-color: rgb(250, 250, 250);
-    color: #3b3b3b;
+
+.step.is-active{
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent !important;
 }
-  
+.step.is-active p {
+    background-color: transparent;
+    color: #000000;
+}
+.step progress{
+    background-color: #f0f0f0;
+}
 .step p {
     text-align: center;
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: #3b3b3b;
+    background-color: #ffffff;
 }
 
 figure {
@@ -84,8 +145,9 @@ figure {
     z-index: 0;
     height: 100vh;
     top: 0;
-  }
-  
+    overflow: hidden; /* Agrega esta línea */
+}
+
 figure p {
     text-align: center;
     padding: 1rem;
@@ -98,17 +160,8 @@ figure p {
     font-size: 8rem;
     font-weight: 900;
     color: #fff;
-  }
-
-#tituloG1 {
-    display: none;
-        position:fixed;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        font-size: 36px;
-    
 }
+
 
 #chart2 {
     margin: 0 auto;
@@ -126,35 +179,4 @@ div#slider {
     vertical-align: middle;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    height: 1%;
-    margin-top: 10%;
-}
 
-.logo_footer img {
-    height: 10%;
-    width: 10%;
-    margin-left: 5%;
-}
-
-footer ul {
-    list-style-type: none;
-    color: #ffffff;
-}
-
-footer ul li {
-    display: inline-block;
-    margin-left: 4%;
-}
-
-footer span {
-    margin-left: 5%;
-}
-
-/* g[aria-label="text"] text {
-    font-weight: bold;
-    font-size: 9px;
-    text-shadow: -2px -2px 0px whitesmoke, -2px -1px 0px whitesmoke, -2px 0px 0px whitesmoke, -2px 1px 0px whitesmoke, -2px 2px 0px whitesmoke, -1px -2px 0px whitesmoke, -1px -1px 0px whitesmoke, -1px 0px 0px whitesmoke, -1px 1px 0px whitesmoke, -1px 2px 0px whitesmoke, 0px -2px 0px whitesmoke, 0px -1px 0px whitesmoke, 0px 1px 0px whitesmoke, 0px 2px 0px whitesmoke, 1px -2px 0px whitesmoke, 1px -1px 0px whitesmoke, 1px 0px 0px whitesmoke, 1px 1px 0px whitesmoke, 1px 2px 0px whitesmoke, 2px -2px 0px whitesmoke, 2px -1px 0px whitesmoke, 2px 0px 0px whitesmoke, 2px 1px 0px whitesmoke, 2px 2px 0px whitesmoke;
-  } */

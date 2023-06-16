@@ -15,93 +15,78 @@
 
 <title>Spotify semestral</title>
 </head>
-<body>
-    <main>
-        <div id="title">
-            <h1>Mitad de año con Spotify</h1>
-        </div> 
-
-        <div id="bajadaGeneral">
-            <p>lorem ipsum explicacion</p>
+    <body>
+        <div class="parallax">
+            <div id="title">
+                <h1>Mitad de año con Spotify</h1>
+            </div>
         </div>
-        
-        <div id="tituloG1">
-            <h2>Grafico 1</h2>
+    
+        <div class="content">
+            <div id="bajadaGeneral">
+                <p>lorem ipsum explicacion</p>
+            </div>
+            
+            <div id="tituloG1">
+                <h2>Grafico 1</h2>
+            </div>
         </div>
+            
         
         <div id="scroll_g1">  
             <section id="scrolly">
         
                 <article>
                     <div class="step" data-step=1>
-                        <p>Enero</p>
+                        <p>Sorry I Am Late</p>
                         <p class="progress">0.0%</p>
                     </div>
                     <div class="step" data-step=2>
-                        <p>Febrero</p>
+                        <p>Time Flies</p>
                         <p class="progress">0.0%</p>
                     </div>
                     <div class="step" data-step=3>
-                        <p>Marzo</p>
+                        <p>Fire Flies</p>
                         <p class="progress">0.0%</p>
                     </div>
                     <div class="step" data-step=4>
-                        <p>Abril</p>
+                        <p>Cello Sonata No.1 in E Minor Op. 38</p>
                         <p class="progress">0.0%</p>
                     </div>
                     <div class="step" data-step=5>
-                        <p>Mayo</p>
+                        <p>Mi Confesion</p>
                         <p class="progress">0.0%</p>
                     </div>
                 </article>
                 <figure></figure>
             </section>
         </div>        
+    
+    <script>
+        window.addEventListener('scroll', function() {
+        var title = document.getElementById('title');
+        var bajadaGeneral = document.getElementById('bajadaGeneral');
+        var tituloG1 = document.getElementById('tituloG1');
 
-        <script>
-            function toggleContent() {
-                var title = document.getElementById("title");
-                var bajadaGeneral = document.getElementById("bajadaGeneral");
-                var tituloG1 = document.getElementById("tituloG1");
-                var G1 = document.getElementById("scroll_g1")
+        var scrollPosition = window.pageYOffset;
+        title.style.opacity = 1 - scrollPosition / (window.innerHeight / 2);
 
-                // Verificar la posición del scroll
-                if (window.scrollY > 0) {
-                    title.style.display = "none";
-                    bajadaGeneral.style.display = "none";
-                    tituloG1.style.display = "none";
-                    G1.style.display = "none";
-                } else {
-                    title.style.display = "block";
-                    bajadaGeneral.style.display = "none";
-                    tituloG1.style.display = "none";
-                    G1.style.display = "none";
-                }
-                if (window.scrollY > title.offsetHeight) {
-                    title.style.display = "none";
-                    bajadaGeneral.style.display = "block";
-                    tituloG1.style.display = "none";
-                    G1.style.display = "none";
-                }
-                if (window.scrollY > bajadaGeneral.offsetTop + bajadaGeneral.offsetHeight) {
-                    title.style.display = "none";
-                    bajadaGeneral.style.display = "none";
-                    tituloG1.style.display = "block";
-                    G1.style.display = "none";
-                }
-                
-                if (window.scrollY > tituloG1.offsetTop + tituloG1.offsetHeight) {
-                    title.style.display = "none";
-                    bajadaGeneral.style.display = "none";
-                    tituloG1.style.display = "block";
-                    G1.style.display = "block";
-                }
-            }
+        if (scrollPosition >= window.innerHeight / 2 && scrollPosition < window.innerHeight) {
+        bajadaGeneral.style.opacity = (scrollPosition - window.innerHeight / 2) / (window.innerHeight / 2);
+        tituloG1.style.opacity = 0;
+        } else if (scrollPosition >= window.innerHeight) {
+        bajadaGeneral.style.opacity = 1;
+        tituloG1.style.opacity = (scrollPosition - window.innerHeight) / (window.innerHeight / 2);
+        } else {
+        bajadaGeneral.style.opacity = 0;
+        tituloG1.style.opacity = 0;
+        }
+        });
 
-            window.addEventListener("scroll", toggleContent);
-        </script> 
+    
+    </script>
 
-    </main> 
+
 
     <script type="module" src="script1_scrolly.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script> 

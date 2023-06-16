@@ -67,7 +67,8 @@ function createChart(data) {
         tickSize: 0,
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 15,
+        grid: false, 
       }),
       Plot.tip(data, Plot.groupY({
         x: d => d.msPlayed / 60000,
@@ -83,6 +84,7 @@ function createChart(data) {
         tickSize: 0,
         padding: 50,
         fontWeight: 'bold',
+        grid: false,
 
       }),
     ],
