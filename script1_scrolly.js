@@ -5,7 +5,7 @@ let main = d3.select("main");
 let scrolly = main.select("#scrolly");
 let $figure = scrolly.select("figure");
 let wChart = 1200
-let hChart = wChart * 0.5;
+let hChart = wChart * 0.7;
 let dataChart = [];
 let $step;
 
@@ -94,11 +94,10 @@ function createChart(key) {
     let chart = Plot.plot({
       width: wChart,
       height: hChart,
-      grid: true,
       marginTop: 50,
       marginBottom: 100,
-      marginLeft: 50,
-      marginRight: 50,
+      marginLeft: 80,
+      marginRight: 90,
       marks: [
         Plot.axisX({
             label:null,
@@ -114,6 +113,7 @@ function createChart(key) {
             tickSize: 0,
             padding: 50,
             fontWeight: 'bold',
+            fontSize:20
           }),
           Plot.text(dataChart, Plot.groupY({x: 'sum'}, {
             y: 'mes',
@@ -124,10 +124,10 @@ function createChart(key) {
               return formattedValue + ' hs';
             },
             textAnchor: 'top',
-            dx: 25,
+            dx: 40,
             dy: -2,
             fill: 'black',
-            fontSize: 12,
+            fontSize: 18,
             fontWeight: 'bold'
       
           })),
@@ -238,7 +238,6 @@ function createChart(key) {
       marginBottom: 50,
       marginTop: 30,
       y: {
-        grid: false,
         label: '',
         labelOffset: 990,
         domain: [0, 1],
@@ -249,7 +248,6 @@ function createChart(key) {
         domain: canciones,
         label: '',
         tickFormat: () => '',
-        grid: false,
       },
       style: {
         fontFamily: 'sans-serif',

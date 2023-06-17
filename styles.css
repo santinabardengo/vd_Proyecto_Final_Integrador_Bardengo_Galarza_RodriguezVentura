@@ -11,14 +11,16 @@ body {
 body {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
     min-height: 1280px;
-    color: #2a5718;
+    color: #000000;
     font-size: 24px;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
+
+h1, #bajadaGeneral, #tituloG1{
+    color: #f0f0f0;
+}
+
 
 .parallax {
     height: 100vh;
@@ -31,7 +33,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #000000;
     transform-origin: top center;
     transform-style: preserve-3d;
     opacity: 1;
@@ -53,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
 }
@@ -69,7 +71,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
 }
@@ -80,8 +82,21 @@ body {
     padding: 0;
 }
 
+#tituloG2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
-
+#tituloG2 h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
 /* esto no se toca eh */
 
 #scrolly {
@@ -117,6 +132,7 @@ body {
 .step.is-active{
     background-color: rgba(255, 255, 255, 0.1);
     background-color: transparent !important;
+
 }
 .step.is-active p {
     background-color: transparent;
@@ -161,7 +177,6 @@ figure p {
     font-weight: 900;
     color: #fff;
 }
-
 
 #chart2 {
     margin: 0 auto;
