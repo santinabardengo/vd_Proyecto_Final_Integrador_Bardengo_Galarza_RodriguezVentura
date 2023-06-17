@@ -4,8 +4,8 @@ const monthNames = [
 let main = d3.select("main");
 let scrolly = main.select("#scrolly");
 let $figure = scrolly.select("figure");
-let wChart = 1200
-let hChart = wChart * 0.7;
+let wChart = 1100
+let hChart = wChart * 0.68;
 let dataChart = [];
 let $step;
 
@@ -121,23 +121,24 @@ function createChart(key) {
             text: d => {
               let suma_ms = d3.sum(d, d2 => d2.msPlayed / (60000*60));
               let formattedValue = d3.format('d')(suma_ms);
-              return formattedValue + ' hs';
+              return formattedValue ;
             },
             textAnchor: 'top',
             dx: 40,
             dy: -2,
             fill: 'black',
-            fontSize: 18,
-            fontWeight: 'bold'
+            fontSize: 28,
+            fontWeight: 'bold',
+            fill: d => d.mes === parseInt(key) ? '#1db954' : '#b3b3b3',
       
           })),
 
           Plot.barX(dataChart, Plot.groupY({x:"sum"},{
             x: d => d.msPlayed/60000,
             y: 'mes',
-            strokeOpacity: 0.4,
-            stroke: 'black',
-            fill: d => d.mes === parseInt(key) ? 'green' : 'gray',
+            cornerRadius: 59,
+            fill: d => d.mes === parseInt(key) ? '#1db954' : '#b3b3b3',
+      
             //tip: true,
           })),
       ],
@@ -205,7 +206,8 @@ function createChart(key) {
   d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
     console.log(data);
     const canciones = data.map(d => d.cancion);
-  
+    const energy = data.map(d=> d.energy);
+    
     let chart2 = Plot.plot({
       marks: [
         Plot.text(data, {
@@ -214,7 +216,8 @@ function createChart(key) {
           text: d => d.cancion,
           textAnchor: 'middle',
           fontWeight: 600,
-          dy: 54
+          dy: 58,
+          
         }),
         Plot.line(data, {
           x: 'cancion',
@@ -229,19 +232,28 @@ function createChart(key) {
           x: "cancion",
           y: "energy",
           fill: "purple",
-          r: 20
+          r: 20,
+        })),
+        Plot.text(data, Plot.pointer({
+          x: "cancion",
+          y: "energy",
+          fill: "purple",
+          text:d => d.energy,
+          dy: -65,
+          fontWeight: "bold",
         }))
       ],
-      width: 2200,
-      height: 900,
+      width: 2100,
+      height: 1200,
       marginLeft: 110,
       marginBottom: 50,
-      marginTop: 30,
+      marginTop: 150,
       y: {
         label: '',
         labelOffset: 990,
-        domain: [0, 1],
-        ticks: 5,
+        domain: [0, 0.95],
+        ticks: 0,
+        tickFormat: () => '',
       },
       x: {
         type: 'band',
@@ -251,7 +263,7 @@ function createChart(key) {
       },
       style: {
         fontFamily: 'sans-serif',
-        fontSize: 44,
+        fontSize: 25,
         background: 'white',
       }
     });

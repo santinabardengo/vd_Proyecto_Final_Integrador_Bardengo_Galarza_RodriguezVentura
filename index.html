@@ -28,7 +28,7 @@
             </div>
             
             <div id="tituloG1">
-                <h2>Grafico 1</h2>
+                <h2>Horas escuchadas por mes</h2>
             </div>
 
         </div>
@@ -63,11 +63,11 @@
             </section>
         </div>      
         
-        <div class="content">
+        
             <div id="tituloG2">
                 <h2>La energia de las canciones</h2>
             </div>
-        </div>
+        
 
         <div id="chart2"></div>
         
@@ -97,7 +97,7 @@
                 } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight) {
                     bajadaGeneral.style.opacity = 0;
                     tituloG1.style.opacity = 0;
-                    tituloG2.style.opacity = 2* (scrollPosition - (scroll_g1.offsetTop + scroll_g1.offsetHeight)) / (window.innerHeight / 2);
+                    tituloG2.style.opacity = 2* (scrollPosition - scroll_g1.offsetHeight) / (window.innerHeight / 2);
                 } else {
                     bajadaGeneral.style.opacity = 0;
                     tituloG1.style.opacity = 0;
