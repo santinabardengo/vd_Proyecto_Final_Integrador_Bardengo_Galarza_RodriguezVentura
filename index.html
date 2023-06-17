@@ -30,7 +30,6 @@
             <div id="tituloG1">
                 <h2>Grafico 1</h2>
             </div>
-
         </div>
             
         
@@ -61,20 +60,13 @@
                 </article>
                 <figure></figure>
             </section>
-        </div>      
-
+        </div>        
     
-        <div id="tituloG2">
-            <h2>La energia de las canciones</h2>
-        </div>
-        <div id="chart2"></div>
-        
     <script>
         window.addEventListener('scroll', function() {
         var title = document.getElementById('title');
         var bajadaGeneral = document.getElementById('bajadaGeneral');
         var tituloG1 = document.getElementById('tituloG1');
-        var tituloG2 = document.getElementById('tituloG2');
 
         var scrollPosition = window.pageYOffset;
         title.style.opacity = 1 - scrollPosition / (window.innerHeight / 2);
@@ -85,7 +77,7 @@
         } else if (scrollPosition >= window.innerHeight) {
         bajadaGeneral.style.opacity = 1;
         tituloG1.style.opacity = (scrollPosition - window.innerHeight) / (window.innerHeight / 2);
-        }else {
+        } else {
         bajadaGeneral.style.opacity = 0;
         tituloG1.style.opacity = 0;
         }
@@ -94,6 +86,7 @@
     
     </script>
 
+    <div id="chart2"></div>
 
 
     <script type="module" src="script1_scrolly.js"></script>
