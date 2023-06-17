@@ -148,3 +148,118 @@ function createChart(key) {
     d3.select("#scrolly figure").append(() => chart);
   }
   
+  function findMostListenedSongPerMonth(data) {
+    // Creamos un objeto para almacenar la suma de los milisegundos escuchados por canción en cada mes
+    let totalListenedTime = {};
+  
+    // Recorremos los datos y sumamos los milisegundos escuchados por canción en cada mes
+    data.forEach(datum => {
+      const month = datum.endTime.slice(0, 7);
+      const currentTotalTime = totalListenedTime[month] || {};
+  
+      // Si la canción no está en el objeto totalListenedTime, la agregamos con su tiempo de reproducción
+      if (!currentTotalTime[datum.trackName]) {
+        currentTotalTime[datum.trackName] = datum.msPlayed / 60000;
+      } else {
+        // Si la canción ya está en el objeto totalListenedTime, sumamos los milisegundos escuchados
+        currentTotalTime[datum.trackName] += datum.msPlayed / 60000;
+      }
+  
+      totalListenedTime[month] = currentTotalTime;
+    });
+  
+    // Recorremos el objeto totalListenedTime para encontrar la canción más escuchada de cada mes
+    let mostListenedSongs = {};
+    for (let month in totalListenedTime) {
+      let maxTime = 0;
+      let mostListenedSong = '';
+  
+      for (let song in totalListenedTime[month]) {
+        const time = totalListenedTime[month][song];
+        if (time > maxTime) {
+          maxTime = time;
+          mostListenedSong = song;
+        }
+      }
+  
+      mostListenedSongs[month] = {
+        song: mostListenedSong,
+        plays: maxTime
+      };
+    }
+  
+    return mostListenedSongs;
+  }
+  
+  
+  // Cargar los datos desde un archivo JSON y generar los gráficos
+  d3.json('StreamingHistory3.json').then(data => {
+    const mostListenedSongsPerMonth = findMostListenedSongPerMonth(data);
+    console.log("Canciones más escuchadas:", mostListenedSongsPerMonth);
+  
+    createChart(dataFetched, cancion.mes);
+    
+  });
+  
+
+  d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
+    console.log(data);
+    const canciones = data.map(d => d.cancion);
+  
+    let chart2 = Plot.plot({
+      marks: [
+        Plot.text(data, {
+          x: 'cancion',
+          y: 'energy',
+          text: d => d.cancion,
+          textAnchor: 'middle',
+          fontWeight: 600,
+          dy: 54
+        }),
+        Plot.line(data, {
+          x: 'cancion',
+          strokeWidth: 8.5,
+          strokeOpacity: 0.5,
+          stroke: "green",
+          marker: "circle",
+          r: 4,
+          y: 'energy'
+        }),
+        Plot.dot(data, Plot.pointer({
+          x: "cancion",
+          y: "energy",
+          fill: "purple",
+          r: 20
+        }))
+      ],
+      width: 2200,
+      height: 900,
+      marginLeft: 110,
+      marginBottom: 50,
+      marginTop: 30,
+      y: {
+        grid: false,
+        label: '',
+        labelOffset: 990,
+        domain: [0, 1],
+        ticks: 5,
+      },
+      x: {
+        type: 'band',
+        domain: canciones,
+        label: '',
+        tickFormat: () => '',
+        grid: false,
+      },
+      style: {
+        fontFamily: 'sans-serif',
+        fontSize: 44,
+        background: 'white',
+      }
+    });
+  
+    d3.select('#chart2 svg').remove();
+    d3.select('#chart2').append(() => chart2);
+  });
+  
+  
