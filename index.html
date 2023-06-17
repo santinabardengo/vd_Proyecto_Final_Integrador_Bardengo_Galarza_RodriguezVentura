@@ -62,38 +62,51 @@
                 <figure></figure>
             </section>
         </div>      
-
-    
-        <div id="tituloG2">
-            <h2>La energia de las canciones</h2>
+        
+        <div class="content">
+            <div id="tituloG2">
+                <h2>La energia de las canciones</h2>
+            </div>
         </div>
+
         <div id="chart2"></div>
         
-    <script>
-        window.addEventListener('scroll', function() {
-        var title = document.getElementById('title');
-        var bajadaGeneral = document.getElementById('bajadaGeneral');
-        var tituloG1 = document.getElementById('tituloG1');
-        var tituloG2 = document.getElementById('tituloG2');
+        <script>
+            window.addEventListener('scroll', function() {
+                var title = document.getElementById('title');
+                var bajadaGeneral = document.getElementById('bajadaGeneral');
+                var tituloG1 = document.getElementById('tituloG1');
+                var tituloG2 = document.getElementById('tituloG2');
+                var scroll_g1 = document.getElementById('scroll_g1'); // Agregado
 
-        var scrollPosition = window.pageYOffset;
-        title.style.opacity = 1 - scrollPosition / (window.innerHeight / 2);
+                var scrollPosition = window.pageYOffset;
+                title.style.opacity = 1 - scrollPosition / (window.innerHeight / 2);
 
-        if (scrollPosition >= window.innerHeight / 2 && scrollPosition < window.innerHeight) {
-        bajadaGeneral.style.opacity = (scrollPosition - window.innerHeight / 2) / (window.innerHeight / 2);
-        tituloG1.style.opacity = 0;
-        } else if (scrollPosition >= window.innerHeight) {
-        bajadaGeneral.style.opacity = 1;
-        tituloG1.style.opacity = (scrollPosition - window.innerHeight) / (window.innerHeight / 2);
-        }else {
-        bajadaGeneral.style.opacity = 0;
-        tituloG1.style.opacity = 0;
-        }
-        });
+                if (scrollPosition >= window.innerHeight /2 && scrollPosition < window.innerHeight) {
+                    bajadaGeneral.style.opacity = 2*(scrollPosition - window.innerHeight / 2) / (window.innerHeight / 2);
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                } else if (2*scrollPosition >= window.innerHeight && scrollPosition < scroll_g1.offsetTop) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity =  2*(scrollPosition - window.innerHeight) / (scroll_g1.offsetTop - window.innerHeight);
+                    tituloG2.style.opacity = 0;
+                } else if (scrollPosition >= scroll_g1.offsetTop && scrollPosition < scroll_g1.offsetTop + scroll_g1.offsetHeight) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 2* (scrollPosition - (scroll_g1.offsetTop + scroll_g1.offsetHeight)) / (window.innerHeight / 2);
+                } else {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                }
+                });
 
-    
-    </script>
-
+          </script>
+          
 
 
     <script type="module" src="script1_scrolly.js"></script>

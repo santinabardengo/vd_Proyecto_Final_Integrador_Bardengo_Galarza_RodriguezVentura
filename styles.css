@@ -82,7 +82,7 @@ h1, #bajadaGeneral, #tituloG1{
     padding: 0;
 }
 
-#tituloG2{
+#tituloG2 {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -94,9 +94,12 @@ h1, #bajadaGeneral, #tituloG1{
 
 #tituloG2 h2 {
     font-size: 3rem;
+    color:#f0f0f0;
     margin: 0;
     padding: 0;
 }
+
+
 /* esto no se toca eh */
 
 #scrolly {
