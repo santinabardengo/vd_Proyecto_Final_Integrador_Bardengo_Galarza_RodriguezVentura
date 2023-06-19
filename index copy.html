@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollama"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+    
+
+<title>Spotify semestral</title>
+</head>
+
+    <body>
+        <header>
+            <div class="logo">
+              <img src="icono_negro.png" alt="Logo de la empresa">
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </nav>
+          </header>
+
+        <div class="parallax">
+            <div id="title">
+                <h1>Mitad de año con Spotify</h1>
+            </div>
+        </div>
+    
+        <div class="content">
+            <div id="bajadaGeneral">
+                <p>lorem ipsum explicacion</p>
+            </div>
+            
+            <div id="tituloG1">
+                <h2>Horas escuchadas por mes</h2>
+            </div>
+
+        </div>
+            
+        
+        <div id="scroll_g1">  
+            <section id="scrolly">
+        
+                <article>
+                    <div class="step" data-step=1>
+                        <p>Sorry I Am Late <br>
+                        <br>
+                            Pasaste 30 minutos escuchando esta cancion 
+                        </p>
+                    </div>
+                    <div class="step" data-step=2>
+                        <p>Time Flies <br>
+                            <br>
+                            Pasaste 79 minutos escuchando esta cancion 
+                        </p>
+                        
+                    </div>
+                    <div class="step" data-step=3>
+                        <p>Fire Flies<br>
+                            <br>
+                            Pasaste 115 minutos escuchando esta cancion 
+                        </p>
+                
+                    </div>
+                    <div class="step" data-step=4>
+                        <p>Cello Sonata No.1 in E Minor Op. 38
+                            <br>
+                            <br>
+                            Pasaste 72 minutos escuchando esta cancion 
+                        </p>
+                    
+                    </div>
+                    <div class="step" data-step=5>
+                        <p>Mi Confesion <br>
+                            <br>
+                            Pasaste 56 minutos escuchando esta cancion 
+                        </p>
+            
+                    </div>
+                </article>
+                <figure></figure>
+            </section>
+        </div>      
+        
+        <div id="tituloG2">
+            <h2>La energia de las canciones</h2>
+        </div>
+
+        <div id="chart2"></div>
+
+       
+        <div id="titulo_cod">
+            <h2> La codificacion de tus canciones</h2>
+        </div>
+    
+
+        <script>
+            window.addEventListener('scroll', function() {
+                var title = document.getElementById('title');
+                var bajadaGeneral = document.getElementById('bajadaGeneral');
+                var tituloG1 = document.getElementById('tituloG1');
+                var tituloG2 = document.getElementById('tituloG2');
+                var scroll_g1 = document.getElementById('scroll_g1');
+                var chart_2 = document.getElementById('chart2');
+                var titulo_cod = document.getElementById('titulo_cod');
+
+                var scrollPosition = window.pageYOffset;
+                title.style.opacity = 1 - scrollPosition / (window.innerHeight / 2);
+
+                if (scrollPosition >= title.offsetTop + title.offsetHeight && scrollPosition < 1.5 * bajadaGeneral.offsetTop) {
+                    bajadaGeneral.style.opacity = 1;
+                    tituloG1.style.opacity = 1 - (scrollPosition - (title.offsetTop + title.offsetHeight)) / (bajadaGeneral.offsetTop - (title.offsetTop + title.offsetHeight));
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                } else if (scrollPosition >= bajadaGeneral.offsetTop && scrollPosition < scroll_g1.offsetTop) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 1;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                } else if (scrollPosition >= scroll_g1.offsetTop && scrollPosition < scroll_g1.offsetTop + scroll_g1.offsetHeight) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight - 1000 && scrollPosition < 1.5 * chart_2.offsetTop) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 1;
+                    titulo_cod.style.opacity = 0;
+                } else if (scrollPosition >= chart_2.offsetTop && scrollPosition < chart_2.offsetTop + chart_2.offsetHeight) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                    chart_2.style.transform = 'translateY(-' + ((scrollPosition - chart_2.offsetTop) / 2) + 'px)';
+                } else if (scrollPosition >= chart_2.offsetTop + chart_2.offsetHeight && scrollPosition < titulo_cod.offsetTop) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                    chart_2.style.transform = 'translateY(0)';
+                } else if (scrollPosition >= titulo_cod.offsetTop) {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 2 * (scrollPosition - titulo_cod.offsetTop) / (window.innerHeight / 2);
+                    chart_2.style.transform = 'translateY(0)';
+                } else {
+                    bajadaGeneral.style.opacity = 0;
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;
+                    chart_2.style.transform = 'translateY(0)';
+                }
+            });
+
+          </script>
+          
+
+          <footer>
+            <p>Copyright &copy; 2023 Spotify</p>
+          </footer>
+    <script type="module" src="script1_scrolly.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+</body>
+</html>
