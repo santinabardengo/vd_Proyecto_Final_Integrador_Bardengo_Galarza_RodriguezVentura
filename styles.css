@@ -8,6 +8,54 @@ body {
     padding: 0;
 }
 
+  
+header {
+    background-color: #ffffff;
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 500px; /* Ajusta el ancho máximo del logo */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+}
+  
+.logo {
+    margin-right: 20px;
+  }
+
+nav {
+    margin-left: auto;
+    margin-right: 50px; /* Mueve el menú de navegación hacia la derecha */
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    
+    
+}
+  
+nav ul li a:hover {
+    color: #1db954; /* Cambia el color al pasar el cursor sobre los enlaces */
+}
+  
 
 footer {
     background-color: #333;
@@ -64,7 +112,7 @@ h1, #bajadaGeneral, #tituloG1{
     align-items: center;
     background-color: #000000;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.8s;
 }
 
 #bajadaGeneral p {
@@ -88,6 +136,7 @@ h1, #bajadaGeneral, #tituloG1{
     margin: 0;
     padding: 0;
 }
+
  /* popo */
 #tituloG2 {
     height: 100vh;
@@ -106,7 +155,22 @@ h1, #bajadaGeneral, #tituloG1{
     padding: 0;
 }
 
+#titulo_cod {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
+#titulo_cod h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
 /* esto no se toca eh */
 
 #scrolly {
