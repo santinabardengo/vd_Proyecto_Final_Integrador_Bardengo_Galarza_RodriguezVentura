@@ -78,14 +78,15 @@ h1, #bajadaGeneral, #tituloG1{
 }
 
 .parallax {
-    height: 110vh;
+    height: 90vh;
     perspective: 1px;
     background-color: #09070a;
 }
 
 #title {
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color:#09070a;
@@ -96,18 +97,26 @@ h1, #bajadaGeneral, #tituloG1{
     margin-bottom: 0;
 }
 
+
 #title h1 {
     font-size: 75px;
     margin: 0;
     padding: 0;
     margin-right: 40%;
     width: 35%;
-    margin-bottom: 15%;
+
 }
+
+#title p{
+    margin-top: 8%; /* Agregado para separar el párrafo del encabezado */
+    margin-right: 53%;
+    order: 1; 
+    color:#f0f0f0;
+}
+
 .parallax img{
     max-width: 40%; /* Ajusta el ancho máximo del logo */
     height: auto; 
-
 }
 
 .content {
@@ -118,6 +127,7 @@ h1, #bajadaGeneral, #tituloG1{
 #tituloG1 {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #000000;
@@ -131,9 +141,14 @@ h1, #bajadaGeneral, #tituloG1{
     padding: 0;
 }
 
+#tituloG1 p{
+    color:#f0f0f0;
+    margin-top: 8%;
+}
 #tituloG2 {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #000000;
@@ -147,10 +162,15 @@ h1, #bajadaGeneral, #tituloG1{
     margin: 0;
     padding: 0;
 }
+#tituloG2 p{
+    color:#f0f0f0;
+    margin-top: 8%;
+}
 
 #titulo_cod {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #000000;
@@ -163,6 +183,11 @@ h1, #bajadaGeneral, #tituloG1{
     margin: 0;
     padding: 0;
     color: #f0f0f0;
+}
+
+#titulo_cod p{
+    color:#f0f0f0;
+    margin-top: 8%;
 }
 /* esto no se toca eh */
 
@@ -262,22 +287,25 @@ figure p {
     color: #fff;
 }
 
-div#seccionG2{
+.G2 {
     display: flex;
     align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px;
 }
 
 #chart2 {
-    margin: 0 auto;
-    width: 80%;
-    margin-bottom: 20%;
-    margin-left: 30%;
-    
+    margin: 0;
+    width: 100%;
+    margin-left: 10%;
 }
-#seccion_g2 p {
-    margin-right: 30%; 
-    margin-top: 10%;
+
+.G2 p {
+    margin: 0;
+    margin-left: 10%;
+    order: -1
 }
+
 
 div#slider {
     margin-left: 15%;

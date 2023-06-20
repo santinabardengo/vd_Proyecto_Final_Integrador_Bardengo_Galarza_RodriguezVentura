@@ -33,14 +33,15 @@
         <div class="parallax">
             <div id="title">
                 <h1>Mitad de año con Spotify</h1>
+                <p> lorem ipsum explicacion</p>
                 <div class="circle"></div>
             </div>
-            
         </div>
 
     
         <div id="tituloG1">
             <h2>Horas escuchadas por mes</h2>
+            <p>lorem ipsum bajada1</p>
         </div>
 
         
@@ -106,16 +107,18 @@
         
         <div id="tituloG2">
             <h2>La energia de las canciones</h2>
+            <p>lorem ipsum bajada2</p>
         </div>
 
-        <div id="seccion_g2">
-            <p>lorem ipsum bajada</p>
-            <div id="chart2">
-            </div>
+        <div class = "G2">
+            <div id="chart2"></div>
+            <p> lorem ipsum explicacion</p>
         </div>
+
         
         <div id="titulo_cod">
             <h2> La codificacion de tus canciones</h2>
+            <p>lorem ipsum bajada3</p>
         </div>
         
         <div id="codificaciones">
@@ -139,11 +142,12 @@
                     tituloG1.style.opacity = 1;
                     tituloG2.style.opacity = 0;
                     titulo_cod.style.opacity = 0;  
-                } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight && scrollPosition< chart_2.offsetTop) {
+                } else if (scrollPosition >= scroll_g1.offsetTop + (scroll_g1.offsetHeight-200) && scrollPosition< chart_2.offsetTop) {
                     tituloG1.style.opacity = 0;
                     tituloG2.style.opacity = 1;
                     titulo_cod.style.opacity = 0;
-                } else if (scrollPosition >= chart_2.offsetTop + chart_2.offsetHeight && scrollPosition < 6800 ) {
+
+                } else if (scrollPosition >= chart_2.offsetTop + (chart_2.offsetHeight-100)) {
                      tituloG1.style.opacity = 0;
                      tituloG2.style.opacity = 0;
                      titulo_cod.style.opacity = 1;
