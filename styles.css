@@ -330,8 +330,10 @@ div#slider {
 .container {
     position: relative;
 }
-.circle::after {
-    content: "";
+<<<<<<< HEAD
+=======
+
+.d3-tip {
     position: absolute;
     width: 2px;
     height: 70%;
@@ -359,6 +361,5 @@ div#slider {
       transform: translate(-50%, -50%) rotate(360deg);
     }
   }
-
-
-
+  
+>>>>>>> 1db545a6c930d5536608221ec3cacbb1c620eaf7
