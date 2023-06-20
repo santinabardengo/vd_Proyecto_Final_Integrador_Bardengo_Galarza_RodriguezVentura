@@ -1,66 +1,291 @@
-
-
-div#chart{
-    overflow-y: auto;
-    margin: auto;
-    width: 50%;
-    margin-left: 15%;
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+* {
+    box-sizing: border-box;
 }
-div#chart2{
-    overflow-y: auto;
-    margin: auto;
-    width: 40%;
-    margin-left: 15%;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 500px; /* Ajusta el ancho máximo del logo */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente */
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+
+
+nav {
+    margin-left: auto;
+    margin-right: 50px; /* Mueve el menú de navegación hacia la derecha */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 18px;
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    
+    
+}
+
+nav ul li a:hover {
+    color: green; /* Cambia el color al pasar el cursor sobre los enlaces */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: small;
 }
 body {
     font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    min-height: 1280px;
+    color: #000000;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
 }
 
-div#bajadaGeneral{
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 15%;
-
-}
-div#bajada1{
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 15%;
-}
-h1 {
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    margin-left: 15%;
-    color: black;
-    font-weight: bolder;
+h1, #bajadaGeneral, #tituloG1{
+    color: #f0f0f0;
 }
 
-h2 {
-    margin-left: 15%;
-    color: black;
-    margin-top: 1%;
+.parallax {
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1px;
 }
 
-h3 {
-    margin-left: 15%;
+#title {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#09070a;
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#title h1 {
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    margin-right: 28%;
+    width: 35%;
+}
+.parallax img{
+    max-width: 40%; /* Ajusta el ancho máximo del logo */
+    height: auto; 
+
+}
+
+
+.content {
+    height: 200vh;
+}
+
+#bajadaGeneral {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+#bajadaGeneral p {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#tituloG1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#tituloG1 h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+#tituloG2 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#tituloG2 h2 {
+    font-size: 3rem;
+    color:#f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#titulo_cod {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#titulo_cod h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+/* esto no se toca eh */
+
+#scrolly {
+    position: relative;
+    /* background-color: #f3f3f3; */
+    display: flex;
+    background-color: white;
+    overflow: hidden,
+}
+
+
+#scrolly svg  {
+    display: block;
+    margin: auto;
+    background-color: #fff;
+}
+
+
+.step {
+
+    color: #0f0e0e;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 100vh;
+    overflow: hidden; /* Agrega esta línea */
+    box-sizing: border-box; /* Agrega esta línea */
+    background-color: transparent !important;
+}
+
+
+#cover1{
+    position: center;
+    width: 50%;
+    margin-top: 0;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step.is-active{
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent !important;
+
+}
+.step.is-active p {
+    background-color: transparent;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.step.is-active .cover-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+.step progress{
+    background-color: #f0f0f0;
+}
+.step p {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+
+}
+
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* background-color: #8a8a8a; */
+    z-index: 0;
+    height: 100vh;
+    top: 0;
+    overflow: hidden; /* Agrega esta línea */
+}
+
+figure p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+#chart2 {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20%;
+    margin-left: 30%;
 }
 
 div#slider {
     margin-left: 15%;
 }
 
-p {
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-}
-
-header {
-    background-color: black;
-    color: white;
-    padding: 1%;
-    height: 20%;
-    display: flex; 
-    align-items: center; 
-    margin-bottom: 5%;
-}
 .logo img {
     margin-left: 15%;
     height: 40%;
@@ -68,67 +293,73 @@ header {
     vertical-align: middle;
 }
 
-nav {
-    margin-left: auto; 
-    margin-right: 15%;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.circle {
+    width: 30%;
+    margin-left: 30%;
+    height: 56%;
+    background-image: url("opc2.jpeg");
+    background-size:cover;
+    background-position: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    overflow: hidden;
+    transition: width 0.5s ease, height 0.5s ease;
 }
 
-nav li {
-    margin-left: 10px;
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    color: white;
-    text-decoration: none;
-    font-size: large;
-}
-nav li:hover {
-    color: #1DB954; 
+.circle:hover {
+    width: 35%;
+    height: 60%;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    height: 1%;
-    margin-top: 10%;
-    
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40%;
+    background-color: white;
+    left: calc(50% - 1px);
+    top: 30%;
+    transform-origin: bottom;
+    animation: agujaHoraria 8s linear infinite;
 }
-.logo_footer img{
-    height: 10%;
-    width: 10%;
-    margin-left: 5%
+.container {
+    position: relative;
 }
-
-footer ul{
-    list-style-type: none;
-    color: #ffffff;
-}
-
-footer ul li{
-    display: inline-block;
-    margin-left: 4%;
-    
-}
-
-footer span{
-    margin-left: 5%;
-}
+<<<<<<< HEAD
+=======
 
 .d3-tip {
     position: absolute;
-    padding: 6px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    color: #333;
-    pointer-events: none;
+    width: 2px;
+    height: 70%;
+    background-color: white;
+    left: calc(50% - 1px);
+    top: 15%;
+    transform-origin: bottom;
+    animation: agujaMinutera 50s linear infinite;
+}
+
+@keyframes agujaHoraria {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes agujaMinutera {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
   
-  .d3-tip span {
-    font-weight: bold;
-  }
-  
+>>>>>>> 1db545a6c930d5536608221ec3cacbb1c620eaf7
