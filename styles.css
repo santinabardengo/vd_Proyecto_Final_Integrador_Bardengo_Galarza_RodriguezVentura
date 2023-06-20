@@ -234,6 +234,7 @@ h1, #bajadaGeneral, #tituloG1{
     align-items: center;
     margin-top: 1rem;
 }
+
 .step progress{
     background-color: #f0f0f0;
 }
@@ -241,9 +242,7 @@ h1, #bajadaGeneral, #tituloG1{
     text-align: center;
     font-size: 1.5rem;
     background-color: #ffffff;
-
 }
-
 
 figure {
     position: -webkit-sticky;
