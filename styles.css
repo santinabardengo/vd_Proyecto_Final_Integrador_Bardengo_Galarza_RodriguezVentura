@@ -325,13 +325,11 @@ div#slider {
     left: calc(50% - 1px);
     top: 30%;
     transform-origin: bottom;
-    animation: agujaHoraria 8s linear infinite;
-}
-.container {
-    position: relative;
-}
+    animation: agujaHoraria 60s linear infinite;
+  }
 
-.d3-tip {
+  .circle::after {
+    content: "";
     position: absolute;
     width: 2px;
     height: 70%;
@@ -339,10 +337,10 @@ div#slider {
     left: calc(50% - 1px);
     top: 15%;
     transform-origin: bottom;
-    animation: agujaMinutera 50s linear infinite;
-}
+    animation: agujaMinutera 10s linear infinite;
+  }
 
-@keyframes agujaHoraria {
+  @keyframes agujaHoraria {
     0% {
       transform: translate(-50%, -50%) rotate(0);
     }
@@ -359,4 +357,3 @@ div#slider {
       transform: translate(-50%, -50%) rotate(360deg);
     }
   }
-  
