@@ -38,16 +38,12 @@
             </div>
         </div>
 
-        <div class="content">
-            <div id="bajadaGeneral">
-                <p>lorem ipsum explicacion</p>
-            </div>
-            
-            <div id="tituloG1">
-                <h2>Horas escuchadas por mes</h2>
-            </div>
-
+    
+        <div id="tituloG1">
+            <h2>Horas escuchadas por mes</h2>
         </div>
+
+        
             
         
         <div id="scroll_g1">  
@@ -114,7 +110,6 @@
         <script>
             window.addEventListener('scroll', function() {
                 var title = document.getElementById('title');
-                var bajadaGeneral = document.getElementById('bajadaGeneral');
                 var tituloG1 = document.getElementById('tituloG1');
                 var tituloG2 = document.getElementById('tituloG2');
                 var scroll_g1 = document.getElementById('scroll_g1');
@@ -122,52 +117,23 @@
                 var titulo_cod = document.getElementById('titulo_cod');
 
                 var scrollPosition = window.pageYOffset;
-                title.style.opacity = 1.5 - scrollPosition / (window.innerHeight / 2);
-
-                if (scrollPosition >= title.offsetTop + title.offsetHeight && scrollPosition < 1.5 * bajadaGeneral.offsetTop) {
-                    bajadaGeneral.style.opacity = 1;
-                    tituloG1.style.opacity = 1 - (scrollPosition - (title.offsetTop + title.offsetHeight)) / (bajadaGeneral.offsetTop - (title.offsetTop + title.offsetHeight));
-                    tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 0;
-                } else if (scrollPosition >= bajadaGeneral.offsetTop && scrollPosition < scroll_g1.offsetTop) {
-                    bajadaGeneral.style.opacity = 0;
+                title.style.opacity = 2 - scrollPosition / (window.innerHeight / 2);
+                if (scrollPosition >= title.offsetTop + title.offsetHeight && scrollPosition < scroll_g1.offsetTop) {
                     tituloG1.style.opacity = 1;
                     tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 0;
-                } else if (scrollPosition >= scroll_g1.offsetTop && scrollPosition < scroll_g1.offsetTop + scroll_g1.offsetHeight) {
-                    bajadaGeneral.style.opacity = 0;
-                    tituloG1.style.opacity = 0;
-                    tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 0;
-                } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight - 1000 && scrollPosition < 1.5 * chart_2.offsetTop) {
-                    bajadaGeneral.style.opacity = 0;
+                    titulo_cod.style.opacity = 0;  
+                } else if (scrollPosition >= scroll_g1.offsetTop + scroll_g1.offsetHeight && scrollPosition< chart_2.offsetTop) {
                     tituloG1.style.opacity = 0;
                     tituloG2.style.opacity = 1;
                     titulo_cod.style.opacity = 0;
-                } else if (scrollPosition >= chart_2.offsetTop && scrollPosition < chart_2.offsetTop + chart_2.offsetHeight) {
-                    bajadaGeneral.style.opacity = 0;
-                    tituloG1.style.opacity = 0;
-                    tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 0;
-                    chart_2.style.transform = 'translateY(-' + ((scrollPosition - chart_2.offsetTop) / 2) + 'px)';
-                } else if (scrollPosition >= chart_2.offsetTop + chart_2.offsetHeight && scrollPosition < titulo_cod.offsetTop) {
-                    bajadaGeneral.style.opacity = 0;
-                    tituloG1.style.opacity = 0;
-                    tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 0;
-                    chart_2.style.transform = 'translateY(0)';
-                } else if (scrollPosition >= titulo_cod.offsetTop) {
-                    bajadaGeneral.style.opacity = 0;
-                    tituloG1.style.opacity = 0;
-                    tituloG2.style.opacity = 0;
-                    titulo_cod.style.opacity = 2 * (scrollPosition - titulo_cod.offsetTop) / (window.innerHeight / 2);
-                    chart_2.style.transform = 'translateY(0)';
+                } else if (scrollPosition >= chart_2.offsetTop + chart_2.offsetHeight && scrollPosition < 6800 ) {
+                     tituloG1.style.opacity = 0;
+                     tituloG2.style.opacity = 0;
+                     titulo_cod.style.opacity = 1;
                 } else {
-                    bajadaGeneral.style.opacity = 0;
                     tituloG1.style.opacity = 0;
                     tituloG2.style.opacity = 0;
                     titulo_cod.style.opacity = 0;
-                    chart_2.style.transform = 'translateY(0)';
                 }
             });
 

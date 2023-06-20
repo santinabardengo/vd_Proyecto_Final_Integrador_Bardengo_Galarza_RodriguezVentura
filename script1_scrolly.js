@@ -90,7 +90,7 @@ function init() {
 
 /* DataViz */
 function createChart(key) {
-    console.log(key)
+    //console.log(key)
     let chart = Plot.plot({
       width: wChart,
       height: hChart,
@@ -195,16 +195,16 @@ function createChart(key) {
   
   // Cargar los datos desde un archivo JSON y generar los gráficos
   d3.json('StreamingHistory3.json').then(data => {
-    const mostListenedSongsPerMonth = findMostListenedSongPerMonth(data);
-    console.log("Canciones más escuchadas:", mostListenedSongsPerMonth);
+    // const mostListenedSongsPerMonth = findMostListenedSongPerMonth(data);
+    // console.log("Canciones más escuchadas:", mostListenedSongsPerMonth);
   
-    createChart(dataFetched, cancion.mes);
+    // createChart(dataFetched, cancion.mes);
     
   });
   
 
   d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
-    console.log(data);
+    //console.log(data);
     const canciones = data.map(d => d.cancion);
     const energy = data.map(d=> d.energy);
     
