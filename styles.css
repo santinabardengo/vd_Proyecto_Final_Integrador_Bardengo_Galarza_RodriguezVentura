@@ -339,7 +339,7 @@ div#slider {
 
 .circle {
     width: 30%;
-    margin-left: 25%;
+    margin-left: 2%;
     height: 56%;
     background-image: url("opc2.jpeg");
     background-size:cover;
@@ -347,7 +347,7 @@ div#slider {
 
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 9999;
@@ -363,7 +363,7 @@ div#slider {
 .circle::before {
     content: "";
     position: absolute;
-    width: 2px;
+    width: 1%;
     height: 40%;
     background-color: white;
     left: calc(50% - 1px);
@@ -375,7 +375,7 @@ div#slider {
   .circle::after {
     content: "";
     position: absolute;
-    width: 2px;
+    width: 0.75%;
     height: 70%;
     background-color: white;
     left: calc(50% - 1px);
