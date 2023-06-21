@@ -2,10 +2,26 @@
     box-sizing: border-box;
 }
 
+
+
 html,
 body {
     margin: 0;
     padding: 0;
+}
+@font-face {
+    font-family: bold_titulos;
+    src: url('Spotify-Font/GothamBold.ttf');   
+}
+
+@font-face {
+    font-family: thin_cuerpo;
+    src: url('Spotify-Font/Gotham-Thin.otf');
+}
+
+@font-face {
+    font-family: detalles;
+    src: url('Spotify-Font/Gotham-Light.otf');
 }
 
 header {
@@ -14,6 +30,7 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
+   
 }
 
 .logo img {
@@ -24,7 +41,6 @@ header {
 .logo {
     margin-right: 20px;
 }
-
 
 
 nav {
@@ -42,15 +58,12 @@ nav ul li {
     display: inline;
     margin-right: 10px;
     font-size: 18px;
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
-    
+    font-family: 'detalles';
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000000;
-    
-    
 }
 
 nav ul li a:hover {
@@ -65,7 +78,7 @@ footer {
     font-size: small;
 }
 body {
-    font-family: 'Proxima Nova', 'Roboto', sans-serif;
+    font-family: 'thin_cuerpo';
     min-height: 1280px;
     color: #000000;
     font-size: 24px;
@@ -95,16 +108,18 @@ h1, #bajadaGeneral, #tituloG1{
     opacity: 1;
     transition: opacity 0.5s;
     margin-bottom: 0;
+    
 }
 
 
 #title h1 {
-    font-size: 75px;
+    font-size: 100px;
     margin: 0;
     padding: 0;
+    margin-top: 10%;
     margin-right: 40%;
-    width: 35%;
-
+    width: 50%;
+    font-family: 'bold_titulos'
 }
 
 #title p{
@@ -112,6 +127,7 @@ h1, #bajadaGeneral, #tituloG1{
     margin-right: 53%;
     order: 1; 
     color:#f0f0f0;
+    font-family: 'thin_cuerpo'
 }
 
 .parallax img{
@@ -133,18 +149,22 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
+  
 }
 
 #tituloG1 h2 {
     font-size: 3rem;
     margin: 0;
     padding: 0;
+    font-family: 'bold_titulos'
 }
 
 #tituloG1 p{
     color:#f0f0f0;
     margin-top: 8%;
+    font-family: 'thin_cuerpo'
 }
+
 #tituloG2 {
     height: 100vh;
     display: flex;
@@ -161,10 +181,12 @@ h1, #bajadaGeneral, #tituloG1{
     color:#f0f0f0;
     margin: 0;
     padding: 0;
+    font-family: 'bold_titulos'
 }
 #tituloG2 p{
     color:#f0f0f0;
     margin-top: 8%;
+    font-family: 'thin_cuerpo'
 }
 
 #titulo_cod {
@@ -183,11 +205,13 @@ h1, #bajadaGeneral, #tituloG1{
     margin: 0;
     padding: 0;
     color: #f0f0f0;
+    font-family: 'bold_titulos'
 }
 
 #titulo_cod p{
     color:#f0f0f0;
     margin-top: 8%;
+    font-family: 'thin_cuerpo'
 }
 /* esto no se toca eh */
 
@@ -208,7 +232,6 @@ h1, #bajadaGeneral, #tituloG1{
 
 
 .step {
-
     color: #0f0e0e;
     background-color: rgba(255, 255, 255, 0.1);
     height: 100vh;
@@ -238,6 +261,9 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: transparent;
     color: #000000;
     margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'thin_cuerpo'
 }
 
 .step.is-active .cover-container{
@@ -254,6 +280,7 @@ h1, #bajadaGeneral, #tituloG1{
     text-align: center;
     font-size: 1.5rem;
     background-color: #ffffff;
+    font-family: 'thin_cuerpo'
 }
 
 figure {
@@ -284,6 +311,7 @@ figure p {
     transform: translate(-50%, -50%);
     font-size: 8rem;
     font-weight: 900;
+    font-family: 'thin_cuerpo';
     color: #fff;
 }
 
@@ -303,7 +331,8 @@ figure p {
 .G2 p {
     margin: 0;
     margin-left: 10%;
-    order: -1
+    order: -1;
+    font-family: 'thin_cuerpo'
 }
 
 
