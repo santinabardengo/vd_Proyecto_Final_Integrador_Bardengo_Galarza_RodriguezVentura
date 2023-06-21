@@ -82,13 +82,13 @@ h1, #bajadaGeneral, #tituloG1{
 }
 
 .parallax {
-    height: 90vh;
+    height: 100%;
     perspective: 1px;
     background-color: #09070a;
 }
 
 #title {
-    height: 90vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
