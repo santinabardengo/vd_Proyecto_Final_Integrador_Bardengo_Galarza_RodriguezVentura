@@ -176,7 +176,7 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
         x: 'cancion',
         strokeWidth: 8.5,
         strokeOpacity: 0.5,
-        stroke: "green",
+        stroke: '#b3b3b3',
         marker: "circle",
         r: 4,
         y: 'energy'
@@ -188,8 +188,8 @@ d3.csv('dataset_canciones.csv', d3.autoType).then(data => {
         r: 20
       }))
     ],
-    width: 2200,
-    height: 900,
+    width: 3000,
+    height: 2000,
     marginLeft: 110,
     marginBottom: 50,
     marginTop: 30,
