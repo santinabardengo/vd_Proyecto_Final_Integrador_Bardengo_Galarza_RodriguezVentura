@@ -87,11 +87,11 @@ h1, #bajadaGeneral, #tituloG1{
 }
 
 #title {
-    height: 700px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: left;
+   
     background-color:#09070a;
     transform-origin: top center;
     transform-style: preserve-3d;
@@ -103,7 +103,8 @@ h1, #bajadaGeneral, #tituloG1{
 
 
 #title h1 {
-    font-size: 5em;
+    font-size: 550%;
+    align-items: left;
     margin-left: 5%;
     padding: 0;
     margin-top: 12%;
@@ -113,10 +114,9 @@ h1, #bajadaGeneral, #tituloG1{
 }
 
 #title p{
-    margin-top: 8%; 
-    font-size: 1.5em;
-    margin-left: 12%;
-    order: 1; 
+    font-size: 120%; 
+    margin:0;
+    margin-left: 5%;
     color:#f0f0f0;
     font-family: 'thin_cuerpo'
 }
@@ -225,6 +225,7 @@ h1, #bajadaGeneral, #tituloG1{
 .step {
     color: #0f0e0e;
     background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
     height: 100vh;
     overflow: hidden; /* Agrega esta línea */
     box-sizing: border-box; /* Agrega esta línea */
@@ -246,9 +247,19 @@ h1, #bajadaGeneral, #tituloG1{
 .step.is-active{
     background-color: rgba(255, 255, 255, 0.1);
     background-color: transparent !important;
+    flex-direction: column;
 
 }
 .step.is-active p {
+    background-color: transparent;
+    color: #000000;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'thin_cuerpo';
+    font-size: 100%;
+}
+
+.step.is-active h3 {
     background-color: transparent;
     color: #000000;
     margin-bottom: 0;
@@ -267,6 +278,14 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: #f0f0f0;
 }
 .step p {
+    text-align: center;
+    font-size: 180%;
+    background-color: #ffffff;
+    font-family: 'thin_cuerpo';
+    font-size: 100%;
+}
+
+.step h3 {
     text-align: center;
     font-size: 180%;
     background-color: #ffffff;
@@ -309,13 +328,14 @@ figure p {
     display: flex;
     align-items: center;
     background-color: #FFFFFF;
-    padding: 8%;
 }
 
 #chart2 {
     margin: 0;
     width: 100%;
-    margin-left: 10%;
+    margin-bottom: 8%;
+    margin-top: 8%;
+
 }
 
 .G2 p {
