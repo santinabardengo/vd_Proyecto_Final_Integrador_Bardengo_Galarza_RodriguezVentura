@@ -366,9 +366,9 @@ div#slider {
 }
 
 .circle {
-    width: 400px;
+    width: 30vw;
     margin-left: 2%;
-    height: 400px;
+    height: 30vw;
     background-image: url("opc2.jpeg");
     background-size:cover;
     background-position: center;
