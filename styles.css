@@ -86,10 +86,6 @@ h1, #bajadaGeneral, #tituloG1{
     color: #f0f0f0;
 }
 
-.parallax {
-    perspective: 1px;
-    background-color: #09070a;
-}
 
 #title {
     height: 100vh;
