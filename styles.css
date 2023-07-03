@@ -452,3 +452,57 @@ div#slider {
     margin-top: 12%;
 }
 
+#barrasVolumen {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 150px;
+  }
+  
+  .barra {
+    width: 10px;
+    height: 50px;
+    background-color: green;
+    margin: 0 2px;
+    animation: subirBajar 2.5s infinite;
+  }
+  .barra1 {
+    width: 10px;
+    height: 50px;
+    background-color: green;
+    margin: 0 2px;
+    animation: subirBajar 2s infinite;
+  }
+  .barra2 {
+    width: 10px;
+    height: 50px;
+    background-color: green;
+    margin: 0 2px;
+    animation: subirBajar 1.85s infinite;
+  }
+  .barra3 {
+    width: 10px;
+    height: 50px;
+    background-color: green;
+    margin: 0 2px;
+    animation: subirBajar 1.55s infinite;
+  }
+  .barra4 {
+    width: 10px;
+    height: 50px;
+    background-color: green;
+    margin: 0 2px;
+    animation: subirBajar 1.30s infinite;
+  }
+  
+  @keyframes subirBajar {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 50px;
+    }
+    100% {
+      height: 0;
+    }
+  }
