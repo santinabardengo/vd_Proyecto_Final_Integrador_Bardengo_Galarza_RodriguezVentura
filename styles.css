@@ -29,7 +29,7 @@ body {
     src: url('Spotify-Font/Gotham-Light.otf');
 }
 
-/* header {
+header {
     background-color: #ffffff;
     height: 50%;
     display: flex;
@@ -41,9 +41,9 @@ header img {
     max-width: 15%; 
     padding: 2%;
     margin-left: 2%
-} */
+}
 
-/* 
+
 nav {
     margin-left: 58%; 
     display: inline-block;
@@ -71,7 +71,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: green; 
-} */
+}
 
 footer {
     background-color: #333;
