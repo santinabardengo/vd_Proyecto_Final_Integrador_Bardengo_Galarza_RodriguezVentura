@@ -88,7 +88,7 @@ h1, #bajadaGeneral, #tituloG1{
 
 
 #title {
-    height: 100vh;
+    height: 680px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -370,9 +370,9 @@ div#slider {
 }
 
 .circle {
-    width: 30%;
+    width: 400px;
     margin-left: 2%;
-    height: 56%;
+    height: 400px;
     background-image: url("opc2.jpeg");
     background-size:cover;
     background-position: center;
