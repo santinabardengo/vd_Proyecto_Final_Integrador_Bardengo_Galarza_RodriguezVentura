@@ -50,7 +50,7 @@
                 <div class="barra2"></div>
                 <div class="barra3"></div>
                 <div class="barra4"></div>
-              </div>
+            </div>
         </div>
 
         
@@ -105,13 +105,13 @@
                     
                     </div>
                     <div class="step" data-step=5>
-                        <h3><b>Mi Confesion</b></h3>
+                        <h3><b>Mi Confesión</b></h3>
                         <p>
                             <br>
                             <img src="mi_confesion_cover.jpg" id="cover1">
                             <br>
                             <br>
-                            Pasaste 56 minutos escuchando esta cancion 
+                            Pasaste 56 minutos escuchando esta canción.
                         </p>
             
                     </div>
@@ -121,8 +121,15 @@
         </div>      
         
         <div id="tituloG2">
-            <h2>La energia de las canciones</h2>
-            <p>Como fue tu energia en estos meses? Descubrila a traves de la energia de tus canciones mas escuchadas</p>
+            <h2>La energía de las canciones</h2>
+            <p>Como fue tu energía en estos meses? Descubrila a traves de la energia de tus canciones mas escuchadas</p>
+            <div id="barrasVolumen">
+                <div class="barra"></div>
+                <div class="barra1"></div>
+                <div class="barra2"></div>
+                <div class="barra3"></div>
+                <div class="barra4"></div>
+            </div>
         </div>
 
         <div class = "G2">
@@ -132,7 +139,7 @@
 
         
         <div id="titulo_cod">
-            <h2> La codificacion de tus canciones</h2>
+            <h2> La codificación de tus canciones</h2>
             <p>Tienen algo en comun tus canciones mas escuchadas? no se que mas poner me siento tan pete escribiendo esto</p>
         </div>
         
@@ -153,7 +160,7 @@
 
                 var scrollPosition = window.pageYOffset;
                 title.style.opacity = 2 - scrollPosition / (window.innerHeight / 2);
-                if (scrollPosition >= title.offsetTop + title.offsetHeight && scrollPosition < scroll_g1.offsetTop) {
+                if (scrollPosition > title.offsetTop  && scrollPosition < scroll_g1.offsetTop) {
                     tituloG1.style.opacity = 1;
                     tituloG2.style.opacity = 0;
                     titulo_cod.style.opacity = 0;  
