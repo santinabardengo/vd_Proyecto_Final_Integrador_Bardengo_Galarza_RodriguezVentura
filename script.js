@@ -137,7 +137,7 @@ function createChart(key) {
             x: d => d.msPlayed/60000,
             y: 'mes',
             cornerRadius: 59,
-            fill: d => d.mes === parseInt(key) ? '#1db954' : '#b3b3b3',
+            fill: d => d.mes === parseInt(key) ? '#1db954' : '#b3b3b37c',
       
             //tip: true,
           })),
@@ -235,6 +235,7 @@ function createChart(key) {
           stroke: d => (d.energy === 0.71 || d.energy === 0.279) ? '#1db954' : 'none',
           strokeWidth: 40,
           strokeOpacity: 0.5,
+          
         }),
         Plot.text(data, Plot.pointer({
           x: "cancion",
@@ -244,14 +245,26 @@ function createChart(key) {
           fontSize: 70,
           dy: -140,
           fontWeight: "bold",
-        }))
+        })),
+        Plot.dot(data, Plot.pointer( {
+          
+          x: "cancion",
+          y: "energy",
+          fill: "#1db95490",
+          r: 65,
+          strokeWidth: 4,
+          strokeOpacity: 0,
+          
+
+          
+        })),
       ],
       width: 5500,
       height: 3000,
       marginRight: -800,
-      marginLeft: 800,
+      marginLeft: 60,
       //marginBottom: 50,
-      marginTop: 80,
+      marginTop: 0,
       y: {
         label: '',
         labelOffset: 2000,

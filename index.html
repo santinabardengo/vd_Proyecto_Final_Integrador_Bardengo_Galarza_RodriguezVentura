@@ -100,7 +100,6 @@
                             <br>
                             <br>
                             Pasaste 72 minutos escuchando esta cancion 
-                          
                         </p>
                     
                     </div>
@@ -133,14 +132,24 @@
         </div>
 
         <div class = "G2">
+            <div id = "boxG2">
+                <p> <b>Lorem ipsum explicacion Lorem ipsum exp Lorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum</b></p>
+            </div>
             <div id="chart2"></div>
-            <p> lorem ipsum explicacion</p>
+            
         </div>
 
         
         <div id="titulo_cod">
             <h2> La codificación de tus canciones</h2>
             <p>Tienen algo en comun tus canciones mas escuchadas? no se que mas poner me siento tan pete escribiendo esto</p>
+            <div id="barrasVolumen">
+                <div class="barra"></div>
+                <div class="barra1"></div>
+                <div class="barra2"></div>
+                <div class="barra3"></div>
+                <div class="barra4"></div>
+            </div>
         </div>
         
         <div id="codificaciones">
@@ -169,10 +178,10 @@
                     tituloG2.style.opacity = 1;
                     titulo_cod.style.opacity = 0;
 
-                } else if (scrollPosition >= chart_2.offsetTop + (chart_2.offsetHeight-200)) {
-                     tituloG1.style.opacity = 0;
-                     tituloG2.style.opacity = 0;
-                     titulo_cod.style.opacity = 1;
+                } else if (scrollPosition >= chart_2.offsetTop + (chart_2.offsetHeight-400)) {
+                    tituloG1.style.opacity = 0;
+                    tituloG2.style.opacity = 0;
+                    titulo_cod.style.opacity = 1;
                 } else {
                     tituloG1.style.opacity = 0;
                     tituloG2.style.opacity = 0;
@@ -180,10 +189,19 @@
                 }
             });
 
-          </script>
-          <footer>
-            <p>Copyright &copy; 2023 Spotify</p>
-          </footer>
+        </script>
+        <footer>
+            <img src="icono.png" >
+            <ul >
+                <li>Legal</li>
+                <li>Centro de privacidad</li>
+                <li>Política de privacidad</li>
+                <li>Cookies</li>
+                <li>Sobre los anuncios</li>
+                <li>Cookies</li>
+                <li id="spotify">Copyright &copy; 2023 Spotify</li> 
+            </ul>
+        </footer>
     <script type="module" src="script.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>

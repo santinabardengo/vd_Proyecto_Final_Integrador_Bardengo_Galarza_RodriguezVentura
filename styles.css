@@ -76,13 +76,7 @@ nav ul li:hover {
     color: #1db954; 
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: 30%;
-    font-size: small;
-}
+
 
 
 h1, #bajadaGeneral, #tituloG1{
@@ -337,21 +331,17 @@ figure p {
 #chart2 {
     margin: 0;
     width: 100%;
-    margin-bottom: 8%;
-    margin-top: 8%;
+    margin-bottom: 0%;
+    margin-top: 0%;
 
 }
 
 #chart2 svg{
     width: 100%;
     margin:0;
+    margin-bottom: 0%;
 }
-.G2 p {
-    margin: 0;
-    margin-left: 10%;
-    order: -1;
-    font-family: 'thin_cuerpo'
-}
+
 
 
 div#slider {
@@ -464,6 +454,7 @@ animation: agujaMinutera 10s linear infinite;
     background-color: green;
     margin: 0 2px;
     animation: subirBajar 2s infinite;
+
 }
 .barra2 {
     width: 10px;
@@ -497,4 +488,63 @@ animation: agujaMinutera 10s linear infinite;
     100% {
     height: 0;
     }
+}
+
+div#boxG2 {
+    background-color: #b3b3b37c;
+    height:  858px;
+    width: 500px;
+
+}
+
+.G2 p {
+    margin-left: 20%;
+    margin-top: 50%;
+    margin-right: 15%;
+    order: -1;
+    font-family: 'thin_cuerpo';
+    font-size:larger;
+    color: 'black';
+}
+
+footer ul{
+    list-style-type: none;
+    display: inline-block ;
+    width: 240%;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    margin-left: 0%;
+
+}
+
+footer ul li {
+    display: inline;
+    margin-left: 1%;
+    font-size: 90%;
+    margin-left: 1%;
+    font-family: 'medium_cuerpo';
+    color: rgb(220, 220, 220); 
+    margin-bottom: 2%;
+}
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    margin-top: 30%;
+    font-size: small;
+
+}
+
+footer ul li#spotify{
+    align-items: right;
+    margin-left: 10%;
+}
+
+footer ul li:hover{
+    color:#1db954;
+}
+
+footer img {
+    width: 12%;
+    margin-left: 2%;
 }
