@@ -452,8 +452,8 @@ animation: agujaMinutera 10s linear infinite;
     margin-left: 10%;
     align-items: left;
     margin-top: 2.5%;
+    margin-bottom: 10%;
 }
-
 #codificaciones p{
     margin-top: 10%;
     margin-left: 10%;
@@ -575,4 +575,41 @@ footer ul li:hover{
 footer img {
     width: 12%;
     margin-left: 2%;
+}
+.explicaciones {
+    display: flex;
+    margin-bottom: -200px;
+}
+
+.left-column {
+    flex-basis: 50%;
+    margin-left: 8%;
+}
+
+.right-column {
+    flex-basis: 50%;
+    margin-right: 1%;
+}
+
+#box h1{
+    font-size: 100%;
+    font-family: "medium_cuerpo";
+    margin: 0;
+    color:#000000;
+}
+#box {
+    background-color:  #1db954c3;  
+    padding: 1.5%; 
+    display: inline-block; 
+    margin-left: 5%;
+    border-radius: 18px; 
+}
+
+.explicaciones p{
+    margin-left: 5%;
+    margin-top: 2%;
+    padding-right: 25%;
+    font-family: "thin_cuerpo";
+    font-size: 85%;
+    
 }
