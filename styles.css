@@ -576,6 +576,13 @@ footer img {
     width: 12%;
     margin-left: 2%;
 }
+footer p{
+    margin-left: 40%;
+    font-family: "thin_cuerpo";
+    margin-top: -20px;
+    font-size: 80%;
+    margin-bottom: 0px;
+}
 .explicaciones {
     display: flex;
     margin-bottom: -200px;
