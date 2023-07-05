@@ -147,7 +147,7 @@ h1, #bajadaGeneral, #tituloG1{
 }
 
 #tituloG2 {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,16 +422,25 @@ animation: agujaMinutera 10s linear infinite;
 
 
 #codificaciones img#cod{
-    width: 80%;
+    width: 85%;
     height: 80%;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 10%;
 }
 
 #codificaciones img#ref{
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 12%;
+    width: 75%;
+    margin-left: 10%;
+    align-items: left;
+    margin-top: 2.5%;
+}
+
+#codificaciones p{
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 150%;
+    font-family: "bold_titulos";
+    color:#000000;
 }
 
 #barrasVolumen {
