@@ -27,7 +27,7 @@
                 <li>| Perfil</li>
             </ul>
             </nav>
-            <img src="perfil.png" class = "round-image">
+            <img id ="perfil" src="perfil.png" class = "round-image">
         </header>
 
    
@@ -35,7 +35,8 @@
                 <h1>Mitad de año con Spotify</h1>
                <b><p>¿Cuáles son las canciones que más escuchaste? </p>
                 <p>¿Cuál fue la energía de tu música?</p> 
-                <p>Descubrí esto y mucho más en el resumen semestral de <b>Spotify</b>.</p>
+                <br>
+                <p>Descubrí esto y mucho más en el resumen semestral de <span class="spot">Spotify</span>.</p>
             <div class="circle"></div>
         </div>
       
@@ -152,7 +153,14 @@
 
         <div class = "G2">
             <div id = "boxG2">
-                <p> <b>Lorem ipsum explicacion Lorem ipsum exp Lorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum explicacionLorem ipsum</b></p>
+                <p> <b>Desde <span class="negritas">techno</span>, pasando por <span class="negritas">electro-pop</span> y <span class="negritas">clásica</span>, la primera mitad de tu año fué movida. <br>
+                    <br>
+                    Empezaste el 2023 con una energía del <span class="negritas">71%</span>, en compañía de tu canción más escuchada.
+                    El mes de abril fue el más tranquilo, tu energía bajo al <span class="negritas">27.9%</span>. <br><br>
+                    Para ver el resto
+                    de la energía de tus meses pasá el puntero por cada punto del gráfico.
+
+                </p>
             </div>
             <div id="chart2"></div>
             
@@ -161,7 +169,7 @@
         
         <div id="titulo_cod">
             <h2> ¿Cómo se ven tus canciones favoritas?</h2>
-            <p>Momento de una clase de teoría musical. Descubrí las codificaciones de tus canciones según características musicales únicas</p>
+            <p>Es el momento de una clase de teoría musical. Descubrí las codificaciones de tus canciones según sus características musicales únicas</p>
             <div id="barrasVolumen">
                 <div class="barra"></div>
                 <div class="barra1"></div>
@@ -215,35 +223,37 @@
                         <h1>Escala</h1>
                     </div>
                     
-                    <p><b>Escala indica el modo musical (menor o mayor) de la cancion: el tipo de escala de la que deriva su contenido melodico</b></p>
-        
+                    <p><b>Escala indica el modo musical (menor o mayor) de la canción: el tipo de escala de la que deriva su contenido melódico.</b></p>
+                    <br>
                     <div id = "box">
                     <h1>Instrumentalidad</h1>
                     </div>
         
-                    <p><b>Predice si una cancion no contiene pistas de voz. Contra mas cerca a 1 es el valor, mas probable es que la cancion no contenga contenido vocal.
-                        Los valores mayores a 0.5 generalmente representan canciones musicales </b>
+                    <p><b>Predice si una canción carece de pistas de voz. Cuánto más cerca a 1 es el valor, más probable es que la canción no contenga contenido vocal.
+                        Los valores mayores a 0.5 generalmente representan canciones instrumentales. </b>
                     </p>
+                    <br>
+                    <div id = "box">
+                        <h1>Clave</h1>
+                        </div>
+            
+                        <p><b>La clave musical en la que está la canción.</b></p>
                     </div>
         
                     <div class = "right-column">
                     <div id = "box">
-                    <h1>Energia</h1>
+                    <h1>Energía</h1>
                     </div>
         
-                    <p><b>Representa una medida perceptual de intensidad y actividad. Una cancion energetica es rapida, fuerte y ruidosa</b></p>
-        
+                    <p><b>Representa una medida perceptual de intensidad y actividad. Una canción energética es rápida, fuerte y ruidosa.</b></p>
+                    
+                    <br>
                     <div id = "box">
                     <h1>Tempo</h1>
                     </div>
         
                     <p><b>El tempo estimado de una cancion en beats por minuto (BPM). Es la velocidad o ritmo de una pieza</b></p>
                     
-                    <div id = "box">
-                    <h1>Clave</h1>
-                    </div>
-        
-                    <p><b>La clave musical en la que esta la cancion</b></p>
         
                     </div>
                 </div>

@@ -43,6 +43,10 @@ header img {
     margin-left: 2%
 }
 
+header img#perfil{
+    width: fit-content;
+}
+
 
 nav {
     margin-left: 32%; 
@@ -73,7 +77,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: #1db954; 
+    color:#1db954;
 }
 
 
@@ -374,6 +378,7 @@ div#slider {
     vertical-align: middle;
 }
 
+
 .circle {
     width: 30vw;
     margin-left: 2%;
@@ -521,7 +526,7 @@ animation: agujaMinutera 10s linear infinite;
 div#boxG2 {
     background-color: #ffffff7c;
     height:  858px;
-    width: 500px;
+    width: 150%
 
 }
 
@@ -535,12 +540,22 @@ div#boxG2 {
     color: 'black';
 }
 
+.spot{
+    color: #1db954;
+    font-family: "medium_cuerpo";
+
+}
+
+.negritas{
+    font-family: "medium_cuerpo";
+}
+
 footer ul{
     list-style-type: none;
     display: inline-block ;
     width: 240%;
     margin-top: 0%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
     margin-left: 0%;
 
 }
@@ -558,7 +573,7 @@ footer {
     background-color: black;
     color: #fff;
     padding: 20px;
-    margin-top: 30%;
+    margin-top: 25%;
     font-size: small;
 
 }
