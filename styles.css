@@ -177,7 +177,8 @@ h1, #bajadaGeneral, #tituloG1{
 #tituloG2 p{
     color:#f0f0f0;
     margin-top: 6.5%;
-    font-family: 'thin_cuerpo'
+    font-family: 'thin_cuerpo';
+    font-size: 115%;
 }
 
 #titulo_cod {
@@ -189,6 +190,7 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
+    font-size: 108%;
 }
 
 #titulo_cod h2 {
@@ -196,13 +198,16 @@ h1, #bajadaGeneral, #tituloG1{
     margin: 0;
     padding: 0;
     color: #f0f0f0;
-    font-family: 'bold_titulos'
+    font-family: 'bold_titulos';
 }
 
 #titulo_cod p{
     color:#f0f0f0;
     margin-top: 8%;
-    font-family: 'thin_cuerpo'
+    font-family: 'thin_cuerpo';
+    width: 80%;
+    
+
 }
 /* esto no se toca eh */
 
