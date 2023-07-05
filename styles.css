@@ -93,6 +93,7 @@ h1, #bajadaGeneral, #tituloG1{
     transform-style: preserve-3d;
     opacity: 1;
     transition: opacity 0.5s;
+
     
 }
 
@@ -112,7 +113,9 @@ h1, #bajadaGeneral, #tituloG1{
     margin:0;
     margin-left: 5%;
     color:#f0f0f0;
-    font-family: 'thin_cuerpo'
+    font-family: 'thin_cuerpo';
+
+
 }
 
 
@@ -130,20 +133,22 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
-  
+
 }
 
 #tituloG1 h2 {
     font-size: 3rem;
     margin: 0;
     padding: 0;
-    font-family: 'bold_titulos'
+    font-family: 'bold_titulos';
+
 }
 
 #tituloG1 p{
     color:#f0f0f0;
-    margin-top: 8%;
-    font-family: 'thin_cuerpo'
+    margin-top: 6%;
+    font-family: 'thin_cuerpo';
+    font-size: 120%;
 }
 
 #tituloG2 {
@@ -155,6 +160,7 @@ h1, #bajadaGeneral, #tituloG1{
     background-color: #000000;
     opacity: 0;
     transition: opacity 0.5s;
+    
 }
 
 #tituloG2 h2 {
@@ -166,7 +172,7 @@ h1, #bajadaGeneral, #tituloG1{
 }
 #tituloG2 p{
     color:#f0f0f0;
-    margin-top: 8%;
+    margin-top: 6.5%;
     font-family: 'thin_cuerpo'
 }
 
@@ -229,7 +235,7 @@ h1, #bajadaGeneral, #tituloG1{
 #cover1{
     position: center;
     width: 40%;
-    margin-top: 0;
+    margin-top: 4%;
 }
 
 .step:last-child {
@@ -246,7 +252,7 @@ h1, #bajadaGeneral, #tituloG1{
 .step.is-active p {
     background-color: transparent;
     color: #000000;
-    margin-bottom: 0;
+    
     text-align: center;
     font-family: 'thin_cuerpo';
     font-size: 120%;
@@ -255,7 +261,7 @@ h1, #bajadaGeneral, #tituloG1{
 .step.is-active h3 {
     background-color: transparent;
     color: #000000;
-    margin-bottom: 0;
+    margin-bottom:0.5;
     text-align: center;
     font-family: 'medium_cuerpo';
     font-weight: 10;
@@ -278,6 +284,19 @@ h1, #bajadaGeneral, #tituloG1{
     flex-direction: column;
     font-family: 'thin_cuerpo';
     font-size: 120%;
+}
+p#bajadas{
+    font-size: 106%;
+
+}
+
+.destacado {
+    color:#1db954;
+    font-family: 'medium_cuerpo';
+}
+.autores{
+    font-family: 'thin_cuerpo';
+    font-size: medium;
 }
 
 .step h3 {
@@ -302,7 +321,7 @@ figure {
     height: 100vh;
     top: 0;
     overflow: hidden; /* Agrega esta línea */
-    margin-top: 8%;
+    margin-top: 0%;
     padding-top: 8%;
 }
 
@@ -316,10 +335,10 @@ figure p {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 8rem;
-    font-weight: 900;
     font-family: 'thin_cuerpo';
     color: #fff;
 }
+
 
 .G2 {
     display: flex;
@@ -500,7 +519,7 @@ animation: agujaMinutera 10s linear infinite;
 }
 
 div#boxG2 {
-    background-color: #b3b3b37c;
+    background-color: #ffffff7c;
     height:  858px;
     width: 500px;
 
